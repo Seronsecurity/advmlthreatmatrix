@@ -247,10 +247,10 @@ To maximize impact on the target organization, malware designed for encrypting d
 Stub
 
 ### References
-[[1](https://arxiv.org/pdf/1810.00069.pdf)] Chakraborty, Anirban, et al. "Adversarial attacks and defences: A survey." arXiv preprint arXiv:1810.00069 (2018).
-[[2](https://nvlpubs.nist.gov/nistpubs/ir/2019/NIST.IR.8269-draft.pdf)] Tabassi, Elham, et al. "A Taxonomy and Terminology of Adversarial Machine Learning." (2019).
-[[3](https://s3.observador.pt/wp-content/uploads/2017/08/08133934/1707-08945.pdf)] Evtimov, Ivan, et al. "Robust physical-world attacks on machine learning models." arXiv preprint arXiv:1707.08945 2.3 (2017): 4.
-[[4](https://arxiv.org/pdf/1910.11099.pdf)] Xu, Kaidi, et al. "Adversarial T-shirt! evading person detectors in a physical world." In Proceedings of the European Conference on Computer Vision, 2020.
+[[1](https://arxiv.org/pdf/1810.00069.pdf)] Chakraborty, Anirban, et al. "Adversarial attacks and defences: A survey." arXiv preprint arXiv:1810.00069 (2018).  
+[[2](https://nvlpubs.nist.gov/nistpubs/ir/2019/NIST.IR.8269-draft.pdf)] Tabassi, Elham, et al. "A Taxonomy and Terminology of Adversarial Machine Learning." (2019).  
+[[3](https://s3.observador.pt/wp-content/uploads/2017/08/08133934/1707-08945.pdf)] Evtimov, Ivan, et al. "Robust physical-world attacks on machine learning models." arXiv preprint arXiv:1707.08945 2.3 (2017): 4.  
+[[4](https://arxiv.org/pdf/1910.11099.pdf)] Xu, Kaidi, et al. "Adversarial T-shirt! evading person detectors in a physical world." In Proceedings of the European Conference on Computer Vision, 2020.  
 [[5](https://arxiv.org/pdf/1912.08166.pdf)] Braunegg, A., et al. "APRICOT: A Dataset of Physical Adversarial Attacks on Object Detection." In Proceedings of the European Conference on Computer Vision, 2020.
 
 # Next Recommended Reading
