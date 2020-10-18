@@ -39,7 +39,7 @@ Adversaries may leverage publicly available information, or Open Source Intellig
 
 #### ![AdvML](/images/color_advml.png)ML Model Discovery
 
-Adversaries may attempt to identify machine learning pipelines that exist on the system and gather information about them, including the software stack used to train and deploy models, training and testing data repositories, model repositories, and software repositories containing algorithms. This information can be used to identify targets for further collection, exfiltration, or disruption, or to tailor and improve attacks. Several of these attacks are discussed here [1,2].
+Adversaries may attempt to identify machine learning pipelines that exist on the system and gather information about them, including the software stack used to train and deploy models, training and testing data repositories, model repositories, and software repositories containing algorithms. This information can be used to identify targets for further collection, exfiltration, or disruption, or to tailor and improve attacks. Several of these attacks are discussed here [1,2](#references).
 
 > ##### ![AdvML](/images/color_advml.png)Reveal ML Ontology
 >
@@ -47,7 +47,7 @@ Adversaries may attempt to identify machine learning pipelines that exist on the
 >
 > ##### ![AdvML](/images/color_advml.png)Reveal ML Model Family
 >
-> One exploratory attack that adversaries may use is model inversion, which allows the attacker to reveal the underlying ML model and/or model family [1].
+> One exploratory attack that adversaries may use is model inversion, which allows the attacker to reveal the underlying ML model and/or model family [1](#references).
 
 #### ![AdvML](/images/color_advml.png)Gathering Datasets
 
@@ -55,7 +55,7 @@ Adversaries may collect datasets similar to those used by a particular organizat
 
 #### ![AdvML](/images/color_advml.png)Exploit Physical Environment
 
-In addition to the attacks that take place purely in the digital domain, adversaries may also exploit the physical environment for their attacks. Recent work has show successful false positive and evasion attacks using physically printed patterns that are placed into scenes to disrupt and attack machine learning models [3,4]. MITRE has recently created a dataset based on these physically printed patterns to help researchers and practicioners better understand these attacks [5].
+In addition to the attacks that take place purely in the digital domain, adversaries may also exploit the physical environment for their attacks. Recent work has show successful false positive and evasion attacks using physically printed patterns that are placed into scenes to disrupt and attack machine learning models [3,4](#references). MITRE has recently created a dataset based on these physically printed patterns to help researchers and practicioners better understand these attacks [5](#references).
 
 #### ![AdvML](/images/color_advml.png)Model Replication
 
