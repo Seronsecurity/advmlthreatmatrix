@@ -109,9 +109,20 @@ Attacks on machine learning (ML) systems are being developed and released with i
 
 <img src="/images/msft2.png" alt="ClearviewAI" width="300" height="400"/>
 
-### MITRE Physical Adversarial Examples
-- TBD 
+### Physical Adversarial Attack
 
+**Summary of Incident:** MITRE’s AI Red Team demonstrated a physical-domain evasion attack on a commercial face identification service with the intention of inducing a targeted misclassification.
+
+**Reported by:** MITRE AI Red Team
+
+**Mapping to Adversarial Threat Matrix:**
+
+- The team first performed reconnaissance to gather information about the target ML model
+- Using a valid account, the team identified the list of IDs targeted by the model
+- The team developed a proxy model using open source data
+- Using the proxy model, the red team optimized a physical domain patch-based attack using an expectation of transformations
+- Via an exposed API interface, the team performed an online physical-domain evasion attack including the adversarial patch in the input stream which resulted in a targeted misclassification
+- This operation had a combination of traditional ATT&CK enterprise techniques such as finding Valid account, and Executing code via an API – all interleaved with adversarial ML specific attacks.
 
 # Contributing
 We welcome any comments, feedback, or new case-studies! Before submitting a case-study, consider that the attack..
