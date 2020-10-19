@@ -11,7 +11,7 @@
     - [Tay Poisoning](/pages/case-studies-page.md#tay-poisoning)
     - [Microsoft Red Team Exercise](/pages/case-studies-page.md#microsoft-red-team-exercise)
     - [Bosch Team Experience with EdgeAI ](/pages/case-studies-page.md#bosch-team-experience-with-edgeai)
-    - [MITRE -- Physical Adversarial Examples -- TBD](/pages/case-studies-page.md#mitre-physical-adversarial-examples-tbd)
+    - [MITRE -- Physical Adversarial Attack](/pages/case-studies-page.md#mitre-physical-adversarial-examples-tbd)
 5. [Contributors](#contributors)
 6. [Feedback](#feedback-and-getting-involved)
 6. [Contact Us](#contact-us)
