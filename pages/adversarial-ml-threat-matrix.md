@@ -242,7 +242,7 @@ Adversaries may steal intellectual property by [Model Replication](#ML-Model-Rep
 
 To maximize impact on the target organization, malware designed for encrypting data may have worm-like features to propagate across a network by leveraging other attack techniques like [Valid Accounts](https://attack.mitre.org/techniques/T1078), [OS Credential Dumping](https://attack.mitre.org/techniques/T1003), and [SMB/Windows Admin Shares](https://attack.mitre.org/techniques/T1021/002).(Citation: FireEye WannaCry 2017)(Citation: US-CERT NotPetya 2017)
 
-#### ![AdvML](/images/color_advml.png)Stop System Shutdown/Reboot
+#### ![Cyber](/images/color_cyber.png)Stop System Shutdown/Reboot
 
 Stub
 
