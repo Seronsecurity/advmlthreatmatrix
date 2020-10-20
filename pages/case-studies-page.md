@@ -1,4 +1,4 @@
-# Case Studies
+## Case Studies Page
 Attacks on machine learning (ML) systems are being developed and released with increased regularity. Historically, attacks against ML systems have been performed in a controlled academic settings, but as these case-studies demonstrate, attacks are being seen in-the-wild. In production settings ML systems are trainined on PII, trusted to make critical decisions with little oversight, and have little to no logging and alerting attached to their use. The case-studies were selected because of the impact to a production ML systems, and each demonstrates one of the following characteristics.
 
 1. Range of Attacks: evasion, poisoning, model replication and exploiting traditional software flaws.
@@ -6,28 +6,23 @@ Attacks on machine learning (ML) systems are being developed and released with i
 3. Range of ML Paradigms: Attacks on MLaaS, ML models hosted on cloud, hosted on- presmise, ML models on edge
 4. Range of Use case: Attacks on ML systems used in both "security-sensitive" applications like cybersecurity and non-security-sensitive applications like chatbots
 
-## ClearviewAI Misconfiguration 
-### Summary of Incident
-Clearview AI's source code repository, though password protected, was misconfigured to allow an arbitrary user to register an account. This allowed an external researcher to gain access to source code, compiled applications, and files that contained production credentials, keys to cloud storage buckets, and copies of its applications and Slack tokens. With write access to training data, an attacker has the ability to cause an arbitrary misclassificaion in the deployed model via [data poisoning](link)  
 
-In a separate incident, Clearview misconfigured S3 storage that gave public access to their Android application APK files. While researchers were able to reverse the application they did not have query access to the private database. Had researchers been able to query the database, a number of ML specific attacks come into scope - model stealing ([A0001](link)), membership inference ([A0002](link)), and model inversion ([A0003](link)).  
-    
-### Adversarial Threat Matrix Mapping
-1. A security researcher gained initial access to Clearview infrastructure with a valid account ([T1078](https://attack.mitre.org/techniques/T1078/)) that was created through a misconfiguration of registration functionality for the repository.
-2. Through the access the researcher had access to training data and source code. 
+### ClearviewAI Misconfiguration 
+**Summary of Incident:** Clearview AI's source code repository, though password protected, was misconfigured to allow an arbitrary user to register an account. This allowed an external researcher to gain access to a private code repository that contained Clearview AI production credentials, keys to cloud storage buckets containing 70K video samples, and copies of its applications and Slack tokens. With access to training data, a bad-actor has the ability to cause an arbitrary misclassificaion in the deployed model. 
+
+**Reported by:** Mossab Hussein (@mossab_hussein)
+
+**Source:**
+-   [Clearview Source Code Lapse on TechCrunch](https://techcrunch.com/2020/04/16/clearview-source-code-lapse/amp/)
+-   [We Found Clearview AI's Shady Face Recognition App](https://gizmodo.com/we-found-clearview-ais-shady-face-recognition-app-1841961772)
+ 
+**Mapping to Adversarial Threat Matrix :**
+- In this scenario, a security researcher gained initial access to via a "Valid Account" that was created through a misconfiguration. No Adversarial ML techniques were used.
+- These kinds of attacks illustrate that any attempt to secure ML system should be on top of "traditional" good cybersecurity hygiene such as locking down the system with least privileges, multi factor authentication and monitoring and auditing.
 
 <img src="/images/ClearviewAI.png" alt="ClearviewAI" width="275" height="150"/>
 
-### Impact
-Machine learning systems run on traditional infrastructure. This attack illustrates how ML systems are affected by vulnerabilities lower in the stack. This attack also demonstrates that organizations should secure their ML infrastructure as they would web applications or internal network resources by following secure configuration guidelines, applying principles of least privilege, enabling multi-factor authentication, and have logging and alerting in place.
 
-### Reported by
-- Mossab Hussein (@mossab_hussein)
-
-<<<<<<< HEAD
-### Sources 
-- [Clearview Source Code Lapse on TechCrunch](https://techcrunch.com/2020/04/16/clearview-source-code-lapse/amp/)
-- [We Found Clearview AI's Shady Face Recognition App](https://gizmodo.com/we-found-clearview-ais-shady-face-recognition-app-1841961772)
 =======
 ### GPT-2 Model Replication 
 **Summary of Incident:** : OpenAI built GPT-2, a powerful natural language model and adopted a staged-release process to incrementally release 1.5 Billion parameter model. Before the 1.5B parameter model could be released by OpenAI eventually, two ML researchers replicated the model and released it to the public. *Note this is an example of model replication NOT model model extraction. Here, attacker is able to recover a functionally equivalent model but generally with lower fidelity than the orginal model, perhaps to do reconnaissance (See ProofPoint attack). In Model extraction, the fidelity of the model is comparable to the original, victim model.*
@@ -73,8 +68,6 @@ Security researchers evaded ProofPoint's email protection system by first buildi
  
 <img src="/images/ProofPoint.png" alt="PFPT_Evasion" width="625" height="175"/>
 
-### Impact
-Impact
 
 ### Reported by
 - Will Pearce (@moo_hax) and Nick Landers (@monoxgas)
@@ -99,12 +92,8 @@ Microsoft created Tay, a twitter chatbot for 18- to 24- year-olds in the U.S. fo
 ### Impact
 As a result of this coordinated attack, Tay's training data was poisoned which led its conversation algorithms to generate more reprehensible material.
 
-### Reported by
-- Unknown
-
 ### Sources
-- [Learning From Tays Introduction](https://blogs.microsoft.com/blog/2016/03/25/learning-tays-introduction/)
-- [Tay (bot)](https://en.wikipedia.org/wiki/Tay_(bot))  
+- [Learning From Tays Introduction](https://blogs.microsoft.com/blog/2016/03/25/learning-tays-introduction/) 
 - [In 2016, Microsoft’s Racist Chatbot Revealed the Dangers of Online Conversation](https://spectrum.ieee.org/tech-talk/artificial-intelligence/machine-learning/in-2016-microsofts-racist-chatbot-revealed-the-dangers-of-online-conversation)
 
 ----
@@ -146,7 +135,7 @@ Bosch team performed a research exercise on an internal edge AI system with a du
 <img src="/images/Bosch1.PNG" alt="Bosch_EdgeAI" width="1025" height="185"/>
 
 ### Impact
-This operation had a combination of traditional ATT&CK industrial control system techniques such as supply chain compromise via sensor, and Executing code via sensor interface. all interleaved with adversarial ML specific steps such as, offline and online evasion examples.
+This operation had a combination of traditional ATT&CK industrial control system techniques such as supply chain compromise via sensor, and Executing code via sensor interface. ll interleaved with adversarial ML specific steps such as, offline and online evasion examples.
 
 ### Reported by 
 - Manoj Parmar (@mparmar47)
@@ -176,9 +165,6 @@ This operation had one step in the traditional ATTACK MITRE technique to do reco
 
 ### Sources
 - None
-
-### MITRE Physical Adversarial Examples
-- TBD 
 
 ----
 # Contributing
