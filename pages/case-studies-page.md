@@ -20,11 +20,11 @@ Attacks on machine learning (ML) systems are being developed and released with i
 Mossab Hussein (@mossab_hussein)
 
 **Source:**
--   [Clearview Source Code Lapse on TechCrunch](https://techcrunch.com/2020/04/16/clearview-source-code-lapse/amp/)
--   [We Found Clearview AI's Shady Face Recognition App](https://gizmodo.com/we-found-clearview-ais-shady-face-recognition-app-1841961772)
+-   https://techcrunch.com/2020/04/16/clearview-source-code-lapse/amp/
+-   https://gizmodo.com/we-found-clearview-ais-shady-face-recognition-app-1841961772
 
+----
 
-=======
 ### GPT-2 Model Replication 
 
 **Summary of Incident:** : OpenAI built GPT-2, a powerful natural language model and adopted a staged-release process to incrementally release 1.5 Billion parameter model. Before the 1.5B parameter model could be released by OpenAI eventually, two ML researchers replicated the model and released it to the public. *Note this is an example of model replication NOT model model extraction. Here, attacker is able to recover a functionally equivalent model but generally with lower fidelity than the orginal model, perhaps to do reconnaissance (See ProofPoint attack). In Model extraction, the fidelity of the model is comparable to the original, victim model.*
@@ -45,8 +45,9 @@ Mossab Hussein (@mossab_hussein)
 - Stefanie Tellex
 
 **Sources**
-- [We Replicated GPT-2 Because You Can Too](https://blog.usejournal.com/opengpt-2-we-replicated-gpt-2-because-you-can-too-45e34e6d36dc)
-- [Dangerous AI](https://www.wired.com/story/dangerous-ai-open-source/)
+- https://www.wired.com/story/dangerous-ai-open-source/
+- https://blog.usejournal.com/opengpt-2-we-replicated-gpt-2-because-you-can-too-45e34e6d36dc
+
 
 ----
 
@@ -68,9 +69,9 @@ Mossab Hussein (@mossab_hussein)
 - Nick Landers (@monoxgas)
 
 **Sources**
-- [CVE-2019-20634](https://nvd.nist.gov/vuln/detail/CVE-2019-20634)
-- [42: The Answer to Life, The Universe, and Everything Offensive Security](https://github.com/moohax/Talks/blob/master/slides/DerbyCon19.pdf)
-- [Proof-Pudding](https://github.com/moohax/Proof-Pudding)
+- https://nvd.nist.gov/vuln/detail/CVE-2019-20634
+- https://github.com/moohax/Talks/blob/master/slides/DerbyCon19.pdf
+- https://github.com/moohax/Proof-Pudding
 
 ----
 
