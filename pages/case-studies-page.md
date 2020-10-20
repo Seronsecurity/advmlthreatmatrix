@@ -124,15 +124,11 @@ Attacks on machine learning (ML) systems are being developed and released with i
 - Via an exposed API interface, the team performed an online physical-domain evasion attack including the adversarial patch in the input stream which resulted in a targeted misclassification
 - This operation had a combination of traditional ATT&CK enterprise techniques such as finding Valid account, and Executing code via an API – all interleaved with adversarial ML specific attacks.
 
-# Contributing
-We welcome any comments, feedback, or new case-studies! Before submitting a case-study, consider that the attack..
+# Contributing New Case Studies
 
-1.  Exploits one or more ML vulnerabilities 
-    - Evasion
-    - Poisoning 
-    - Model replication
-    - A bug in code that enabled any of the above
-2.  The attack was against a production system
-    - Machine Learning as a Service (MLaaS)
-    - ML models hosted on cloud (AzureML, AWS, GCP, etc), on-prem, or on the edge (Mobile, IOT, etc)
-3.  Most importantly, you have permission to share the information. Please follow the proper channels before reporting a new attack. If you are unsure of how best disclose, the team here is happy to help coordinate responsible disclosure. 
+We are especially excited for new case-studies! We look forward to contributions from both industry and academic researchers. Before submitting a case-study, consider that the attack:
+1.  Exploits one or more vulnerabilities that compromises the confidentiality, integrity or availability of ML system 
+2.  The attack was against a *production, commercial* ML system. This can be on MLaaS like Amazon, Microsoft Azure, Google Cloud AI, IBM Watson etc or ML systems embedded in client/edge. 
+3.  You have permission to share the information. Please follow the proper channels before reporting a new attack and make sure you are practicing responsible disclosure. If you are unsure, email advmlthreatmatrix-core@googlegroups.com and we can help you out. 
+
+If you satisfy all the three criteria: Email advmlthreatmatrix-core@googlegroups.com with summary of the incident and Adversarial ML Threat Matrix mapping.
