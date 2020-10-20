@@ -25,7 +25,11 @@ However, there are two main differences:
 3.  We are not prescribing definitive defenses at this point - The world of adversarial. We are already in conversations to add best practices in future revisions such     as adversarial training for adversarial examples, restricting the number of significant digits in confidence score for model stealing.
 4.  This is not a risk prioritization framework - The Threat Matrix only collates the known techniques; it does not provide a means to prioritize the risks.
 
-
+|Legend                            | Description                                                                             |
+|:---:                             | :---                                                                                    |
+|![Cyber](/images/color_cyber.png) | Attacks not specific to ML, but useful for attacking ML systems.                        |
+|![AdvML](/images/color_advml.png) | Attacks specific to ML and not the underlying systems                                   |
+| **                               | Included ATT&CK techniques that have been modified to emphasize specfic AdvML scenarios | 
 
 ![Adversarial ML Threat Matrix](/images/AdvMLThreatMatrix.jpg)
 
@@ -75,44 +79,54 @@ Machine learning models' functionality can be stolen exploiting an inference API
 
 ### Initial Access
 
-#### ![Cyber](/images/color_cyber.png)Exploit Public-Facing Application
+#### ![AdvML](/images/color_advml.png)Pre-Trained ML Model with Backdoor
+
+Adversaries may gain initial access to a system by compromising portions of the ML supply chain. This could include GPU hardware, data and its annotations, parts of the ML software stack, or the model itself. In some instances the attacker will need secondary access to fully carry out an attack using compromised components of the supply chain.
+
+### ![Cyber](/images/color_cyber.png) Included ATT&CK Techniques
+<details>
+<summary>Exploit Public-Facing Application</summary>
 
 Adversaries may attempt to take advantage of a weakness in an Internet-facing computer or program using software, data, or commands in order to cause unintended or unanticipated behavior. The weakness in the system can be a bug, a glitch, or a design vulnerability. These applications are often websites, but can include databases (like SQL)(Citation: NVD CVE-2016-6662), standard services (like SMB(Citation: CIS Multiple SMB Vulnerabilities) or SSH), and any other applications with Internet accessible open sockets, such as web servers and related services.(Citation: NVD CVE-2014-7169) Depending on the flaw being exploited this may include [Exploitation for Defense Evasion](https://attack.mitre.org/techniques/T1211).
 
 If an application is hosted on cloud-based infrastructure, then exploiting it may lead to compromise of the underlying instance. This can allow an adversary a path to access the cloud APIs or to take advantage of weak identity and access management policies.
 
 For websites and databases, the OWASP top 10 and CWE top 25 highlight the most common web-based vulnerabilities.(Citation: OWASP Top 10)(Citation: CWE top 25)
+</details>
 
-#### ![Cyber](/images/color_cyber.png)Valid Accounts
+<details>
+<summary>Valid Accounts</summary>
 
 Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion. Compromised credentials may be used to bypass access controls placed on various resources on systems within the network and may even be used for persistent access to remote systems and externally available services, such as VPNs, Outlook Web Access and remote desktop. Compromised credentials may also grant an adversary increased privilege to specific systems or access to restricted areas of the network. Adversaries may choose not to use malware or tools in conjunction with the legitimate access those credentials provide to make it harder to detect their presence.
 
 The overlap of permissions for local, domain, and cloud accounts across a network of systems is of concern because the adversary may be able to pivot across accounts and systems to reach a high level of access (i.e., domain or enterprise administrator) to bypass access controls set within the enterprise. (Citation: TechNet Credential Theft)
+</details>
 
-#### ![Cyber](/images/color_cyber.png)Phishing
+<details>
+<summary>Phishing</summary>
 
 Adversaries may send phishing messages to elicit sensitive information and/or gain access to victim systems. All forms of phishing are electronically delivered social engineering. Phishing can be targeted, known as spearphishing. In spearphishing, a specific individual, company, or industry will be targeted by the adversary. More generally, adversaries can conduct non-targeted phishing, such as in mass malware spam campaigns.
 
 Adversaries may send victim’s emails containing malicious attachments or links, typically to execute malicious code on victim systems or to gather credentials for use of [Valid Accounts](https://attack.mitre.org/techniques/T1078). Phishing may also be conducted via third-party services, like social media platforms.
+</details>
 
-#### ![Cyber](/images/color_cyber.png)External Remote Services
+<details>
+<summary>External Remote Services</summary>
 
 Adversaries may leverage external-facing remote services to initially access and/or persist within a network. Remote services such as VPNs, Citrix, and other access mechanisms allow users to connect to internal enterprise network resources from external locations. There are often remote service gateways that manage connections and credential authentication for these services. Services such as [Windows Remote Management](https://attack.mitre.org/techniques/T1021/006/) can also be used externally.
 
 Access to [Valid Accounts](https://attack.mitre.org/techniques/T1078) to use the service is often a requirement, which could be obtained through credential pharming or by obtaining the credentials from users after compromising the enterprise network. Access to remote services may be used as a redundant or persistent access mechanism during an operation.
+</details>
 
-#### ![AdvML](/images/color_advml.png)Pre-Trained ML Model with Backdoor
-
-Adversaries may gain initial access to a system by compromising portions of the ML supply chain. This could include GPU hardware, data and its annotations, parts of the ML software stack, or the model itself. In some instances the attacker will need secondary access to fully carry out an attack using compromised components of the supply chain.
-
-#### ![Cyber](/images/color_cyber.png)Trusted Relationship
+<details>
+<summary>Trusted Relationship</summary>
 
 Adversaries may breach or otherwise leverage organizations who have access to intended victims. Access through trusted third party relationship exploits an existing connection that may not be protected or receives less scrutiny than standard mechanisms of gaining access to a network.
 
 Organizations often grant elevated access to second or third-party external providers in order to allow them to manage internal systems as well as cloud-based environments. Some examples of these relationships include IT services contractors, managed security providers, infrastructure contractors (e.g. HVAC, elevators, physical security). The third-party provider's access may be intended to be limited to the infrastructure being maintained, but may exist on the same network as the rest of the enterprise. As such, [Valid Accounts](https://attack.mitre.org/techniques/T1078) used by the other party for access to internal network systems may be compromised and used.
+</details>
 
 ### Execution
-
 #### ![AdvML](/images/color_advml.png)Execute Unsafe ML Models
 
 An Adversary may utilize unsafe ML Models that when executed have an unintended effect. The adversary can use this technique to establish persistent access to systems. These models may be introduced via a [Pre-Trained Model with Backdoor](#Pre-Trained-ML-Model-with-Backdoor).
@@ -125,30 +139,34 @@ An Adversary may utilize unsafe ML Models that when executed have an unintended 
 >
 > An adversary may use pickle embedding to introduce malicious data payloads.
 
-#### ![Cyber](/images/color_cyber.png)Execution via API
-
+### ![Cyber](/images/color_cyber.png) Included ATT&CK Techniques
+<details>
+<summary>Execution via API</summary>
 stub
+</details>
 
-#### ![Cyber](/images/color_cyber.png)Traditional Software Attacks
-
+<details>
+<summary>Traditional Software Attacks</summary>
 Stubs
+</details>
 
 ### Persistence
-
 #### ![AdvML](/images/color_advml.png)Unsafe ML Model Execution
 
 An Adversary may utilize unsafe ML Models that when executed have an unintended effect. The adversary can use this technique to establish persistent access to systems. These models may be introduced via a [Pre-trained Model with Backdoor](#Pre-Trained-ML-Model-with-Backdoor). An example of this technique is to use pickle embedding to introduce malicious data payloads.
 
-#### ![Cyber](/images/color_cyber.png)Account Manipulation
-
+### ![Cyber](/images/color_cyber.png) Included ATT&CK Techniques
+<details> 
+<summary>Account Manipulation</summary>
 Adversaries may manipulate accounts to maintain access to victim systems. Account manipulation may consist of any action that preserves adversary access to a compromised account, such as modifying credentials or permission groups. These actions could also include account activity designed to subvert security policies, such as performing iterative password updates to bypass password duration policies and preserve the life of compromised credentials. In order to create or manipulate accounts, the adversary must already have sufficient permissions on systems or the domain.
+</details>
 
-#### ![Cyber](/images/color_cyber.png)Implant Container Image
-
+<details>
+<summary>Implant Container Image</summary>
 Adversaries may implant cloud container images with malicious code to establish persistence. Amazon Web Service (AWS) Amazon Machine Images (AMI), Google Cloud Platform (GCP) Images, and Azure Images as well as popular container runtimes such as Docker can be implanted or backdoored. Depending on how the infrastructure is provisioned, this could provide persistent access if the infrastructure provisioning tool is instructed to always use the latest image.(Citation: Rhino Labs Cloud Image Backdoor Technique Sept 2019)
 
 A tool has been developed to facilitate planting backdoors in cloud container images.(Citation: Rhino Labs Cloud Backdoor September 2019) If an attacker has access to a compromised AWS instance, and permissions to list the available container images, they may implant a backdoor such as a [Web Shell](https://attack.mitre.org/techniques/T1505/003).(Citation: Rhino Labs Cloud Image Backdoor Technique Sept 2019) Adversaries may also implant Docker images that may be inadvertently used in cloud deployments, which has been reported in some instances of cryptomining botnets.(Citation: ATT Cybersecurity Cryptocurrency Attacks on Cloud)
-
+</details>
 
 ### Defense Evasion
 
@@ -208,12 +226,14 @@ Adversaries may exfiltrate private information related to machine learning model
 
 Machine learning models' functionality can be stolen exploiting an inference API. This constitutes [Stolen Intellectual Property](#Stolen-Intellectual-Property).
 
-#### ![Cyber](/images/color_cyber.png)Insecure Storage
+### ![Cyber](/images/color_cyber.png) Included ATT&CK Techniques
+<details> 
+<summary>Insecure Storage<summary>
 
 Adversaries may exfiltrate proprietary machine learning models or private training and testing data by exploiting insecure storage mechanisms. Adversaries may [discover](#ML-Model-Discovery), and exfiltrate components of a ML pipeline, resulting in [Stolen Intellectual Property](#Stolen-Intellectual-Property)
+</details>
 
 ### Impact
-
 #### ![AdvML](/images/color_advml.png)ML Model Integrity Attacks
 
 Adversaries may attack the integrity of machine learning models by crafting adversarial examples that appear to be normal inputs, but cause the model to make errors at inference time. These attacks can reduce prediction confidence and cause false positives or false negatives, eroding confidence in the system over time.
@@ -232,19 +252,23 @@ Adversaries may target different Machine Learning services to conduct a DoS.
 
 One example of this type of attack is Sponge attack.
 
-#### ![Cyber](/images/color_cyber.png)Stolen Intellectual Property
-
+#### ![Cyber](/images/color_cyber.png) Included ATT&CK Techniques
+<details>
+<summary>Stolen Intellectual Property</summary>
 Adversaries may steal intellectual property by [Model Replication](#ML-Model-Replication) or [Model Stealing](#ML-Model-Stealing).
+</details>
 
-#### ![AdvML](/images/color_advml.png)Data Encrypted for Impact
-
- Adversaries may encrypt data on target systems or on large numbers of systems in a network to interrupt availability to system and network resources. They can attempt to render stored data inaccessible by encrypting files or data on local and remote drives and withholding access to a decryption key. This may be done in order to extract monetary compensation from a victim in exchange for decryption or a decryption key (ransomware) or to render data permanently inaccessible in cases where the key is not saved or transmitted.(Citation: US-CERT Ransomware 2016)(Citation: FireEye WannaCry 2017)(Citation: US-CERT NotPetya 2017)(Citation: US-CERT SamSam 2018) In the case of ransomware, it is typical that common user files like Office documents, PDFs, images, videos, audio, text, and source code files will be encrypted. In some cases, adversaries may encrypt critical system files, disk partitions, and the MBR.(Citation: US-CERT NotPetya 2017)
+<details>
+<summary>Data Encrypted for Impact</summary>
+Adversaries may encrypt data on target systems or on large numbers of systems in a network to interrupt availability to system and network resources. They can attempt to render stored data inaccessible by encrypting files or data on local and remote drives and withholding access to a decryption key. This may be done in order to extract monetary compensation from a victim in exchange for decryption or a decryption key (ransomware) or to render data permanently inaccessible in cases where the key is not saved or transmitted.(Citation: US-CERT Ransomware 2016)(Citation: FireEye WannaCry 2017)(Citation: US-CERT NotPetya 2017)(Citation: US-CERT SamSam 2018) In the case of ransomware, it is typical that common user files like Office documents, PDFs, images, videos, audio, text, and source code files will be encrypted. In some cases, adversaries may encrypt critical system files, disk partitions, and the MBR.(Citation: US-CERT NotPetya 2017)
 
 To maximize impact on the target organization, malware designed for encrypting data may have worm-like features to propagate across a network by leveraging other attack techniques like [Valid Accounts](https://attack.mitre.org/techniques/T1078), [OS Credential Dumping](https://attack.mitre.org/techniques/T1003), and [SMB/Windows Admin Shares](https://attack.mitre.org/techniques/T1021/002).(Citation: FireEye WannaCry 2017)(Citation: US-CERT NotPetya 2017)
+</details>
 
-#### ![Cyber](/images/color_cyber.png)Stop System Shutdown/Reboot
-
+<details>
+<summary>Stop System Shutdown/Reboot</summary>
 Stub
+</details>
 
 ### References
 [[1](https://arxiv.org/pdf/1810.00069.pdf)] Chakraborty, Anirban, et al. "Adversarial attacks and defences: A survey." arXiv preprint arXiv:1810.00069 (2018).  
