@@ -51,4 +51,4 @@ Consider that a model exists on a client (like a phone) or on the edge (such as 
 3.  Though we were not specific about what kind of data – image, audio, timeseries, or tabular data - research has shown that of these attacks are data agnostic
 
 # Next Recommended Reading 
-Head over to [Adversarial ML Threat Matrix] (/pages/adversarial-ml-threat-matrix.md#adversarial-ml-threat-matrix) page to see a compendium of attacks in ATT&CK style. 
+Head over to [Adversarial ML Threat Matrix](/pages/adversarial-ml-threat-matrix.md#adversarial-ml-threat-matrix) page to see a compendium of attacks in ATT&CK style. 
