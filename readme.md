@@ -66,7 +66,7 @@ The Adversarial ML Threat Matrix is a first-cut attempt at collating a knowledge
 
 -   For immediate corrections, please submit a Pull Request with suggested changes! We are excited to make this system better with you!
 -   For a more hands on feedback session, we are partnering with Defcon's AI Village to open up the framework to all community members to get feedback and make it better. Current thinking is to have this event circa
-Jan/Feb 2021.Please register here for the workshop for more hands on feedback session
+Jan/Feb 2021.Please register [here](https://docs.google.com/forms/d/e/1FAIpQLSdqtuE0v7qBRsGUUWDrzUEenHCdv-HNP1IiLil67dgpXtHqQw/viewform) for the workshop for more hands on feedback session
 
 **Join our Adversarial ML Threat Matrix Google Group**
 
