@@ -18,21 +18,21 @@
 6. [Contact Us](#contact-us)
 ---- 
 
-The goal of this project is to position attacks on ML systems in an ATT&CK-style framework so that security analysts can orient themselves
-in this new and upcoming threats.
+The goal of this project is to position attacks on machine learning (ML) systems in an ATT&CK-style framework so that security analysts can orient themselves
+to these new and upcoming threats.
 
 If you are new to how ML systems can be attacked, we suggest starting at this no-frills [Adversarial ML 101](/pages/adversarial-ml-101.md) aimed at security analysts. 
 
 Or if you want to dive right in, head to [Adversarial ML Threat Matrix](/pages/adversarial-ml-threat-matrix.md)
 
 ## Why Develop Adversarial ML Threat Matrix? 
-1.  In the last three years, major companies such as [Google](https://www.zdnet.com/article/googles-best-image-recognition-system-flummoxed-by-fakes/), [Amazon](https://www.fastcompany.com/90240975/alexa-can-be-hacked-by-chirping-birds), [Microsoft](https://www.theguardian.com/technology/2016/mar/24/tay-microsofts-ai-chatbot-gets-a-crash-course-in-racism-from-twitter), and [Tesla](https://spectrum.ieee.org/cars-that-think/transportation/self-driving/three-small-stickers-on-road-can-steer-tesla-autopilot-into-oncoming-lane), have had their ML systems tricked, evaded, or misled.
-2.  This trend is only set to rise: According to [Gartner report](https://www.gartner.com/doc/3939991). 30% of cyberattacks by 2022 will involve data poisoning, model     theft or adversarial examples.
-3.  However, industry is underprepared. In a [survey](https://arxiv.org/pdf/2002.05646.pdf) of 28 organizations spanning small as well as large organizations, 25           organizations did not know how to secure their ML systems.
+-   In the last three years, major companies such as [Google](https://www.zdnet.com/article/googles-best-image-recognition-system-flummoxed-by-fakes/), [Amazon](https://www.fastcompany.com/90240975/alexa-can-be-hacked-by-chirping-birds), [Microsoft](https://www.theguardian.com/technology/2016/mar/24/tay-microsofts-ai-chatbot-gets-a-crash-course-in-racism-from-twitter), and [Tesla](https://spectrum.ieee.org/cars-that-think/transportation/self-driving/three-small-stickers-on-road-can-steer-tesla-autopilot-into-oncoming-lane), have had their ML systems tricked, evaded, or misled.
+-   This trend is only set to rise: According to a [Gartner report](https://www.gartner.com/doc/3939991). 30% of cyberattacks by 2022 will involve data poisoning, model     theft or adversarial examples.
+-   Industry is underprepared. In a [survey](https://arxiv.org/pdf/2002.05646.pdf) of 28 organizations spanning small as well as large organizations, 25           organizations did not know how to secure their ML systems.
 
-Unlike traditional cybersecurity vulnerabilities that are tied to specific software and hardware systems, adversarial ML vulnerabilities are enabled by inherent limitations underlying ML algorithms. As a result, data can now be weaponized in new ways requiring that we extend the way we model cyber adversary behavior, reflecting emerging threat vectors and the rapidly evolving adversarial machine learning attack lifecycle.
+Unlike traditional cybersecurity vulnerabilities that are tied to specific software and hardware systems, adversarial ML vulnerabilities are enabled by inherent limitations underlying ML algorithms. Data can be weaponized in new ways which requires an extension of how we model cyber adversary behavior, to reflect emerging threat vectors and the rapidly evolving adversarial machine learning attack lifecycle.
 
-This threat matrix came out of partnership with 12 industry and academic research groups with the goal of empowering security analysts to orient themselves in this new and upcoming threats. **We are seeding this framework with a curated set of vulnerabilities and adversary behaviors that Microsoft and MITRE have vetted to be effective against production ML systems** Since the primary audience is security analysts, we used ATT&CK as template to position attacks on ML systems given its popularity and wide adoption in the industry.
+This threat matrix came out of partnership with 12 industry and academic research groups with the goal of empowering security analysts to orient themselves to these new and upcoming threats. **The framework is seeded with a curated set of vulnerabilities and adversary behaviors that Microsoft and MITRE have vetted to be effective against production ML systems.** We used ATT&CK as a template since security analysts are already familiar with using this type of matrix.
 
 We recommend digging into [Adversarial ML Threat Matrix](/pages/adversarial-ml-threat-matrix.md) next
 
