@@ -66,17 +66,17 @@ The Adversarial ML Threat Matrix is a first-cut attempt at collating a knowledge
 **Corrections and Improvement**
 
 -   For immediate corrections, please submit a Pull Request with suggested changes! We are excited to make this system better with you!
--   For a more hands on feedback session, we are partnering with Defcon's AI Village to open up the framework to all community members to get feedback and make it better. Current thinking is to have this event circa
-Jan/Feb 2021.Please register [here](https://docs.google.com/forms/d/e/1FAIpQLSdqtuE0v7qBRsGUUWDrzUEenHCdv-HNP1IiLil67dgpXtHqQw/viewform) for the workshop for more hands on feedback session
+-   For a more hands on feedback session, we are partnering with Defcon's AI Village to open up the framework to all community members to get feedback and make it better. Current thinking is to have this workshop circa
+Jan/Feb 2021.Please register [here](https://docs.google.com/forms/d/e/1FAIpQLSdqtuE0v7qBRsGUUWDrzUEenHCdv-HNP1IiLil67dgpXtHqQw/viewform)
 
 **Contribute Case Studies**
 
 We are especially excited for new case-studies! We look forward to contributions from both industry and academic researchers. Before submitting a case-study, consider that the attack:
 1.  Exploits one or more vulnerabilities that compromises the confidentiality, integrity or availability of ML system 
 2.  The attack was against a *production, commercial* ML system. This can be on MLaaS like Amazon, Microsoft Azure, Google Cloud AI, IBM Watson etc or ML systems embedded in client/edge. 
-3.  You have permission to share the information. Please follow the proper channels before reporting a new attack and make sure you are practicing responsible disclosure. If you are unsure, email advmlthreatmatrix-core@googlegroups.com and we can help you out. 
+3.  You have permission to share the information/published this research. Please follow the proper channels before reporting a new attack and make sure you are practicing responsible disclosure.
 
-If you satisfy all the three criteria: Email advmlthreatmatrix-core@googlegroups.com with summary of the incident and Adversarial ML Threat Matrix mapping.
+You can email advmlthreatmatrix-core@googlegroups.com with summary of the incident and Adversarial ML Threat Matrix mapping.
 
 
 **Join our Mailing List**
