@@ -69,6 +69,7 @@ The Adversarial ML Threat Matrix is a first-cut attempt at collating a knowledge
 Jan/Feb 2021.Please register [here](https://docs.google.com/forms/d/e/1FAIpQLSdqtuE0v7qBRsGUUWDrzUEenHCdv-HNP1IiLil67dgpXtHqQw/viewform) for the workshop for more hands on feedback session
 
 **Contribute Case Studies**
+
 We are especially excited for new case-studies! We look forward to contributions from both industry and academic researchers. Before submitting a case-study, consider that the attack:
 1.  Exploits one or more vulnerabilities that compromises the confidentiality, integrity or availability of ML system 
 2.  The attack was against a *production, commercial* ML system. This can be on MLaaS like Amazon, Microsoft Azure, Google Cloud AI, IBM Watson etc; ML models on devices 
