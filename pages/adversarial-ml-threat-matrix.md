@@ -1,5 +1,14 @@
 # Adversarial ML Threat Matrix
 
+
+## Things to keep in mind before you use the framework:
+1.  This is a **first cut attempt** at collating known adversary techniques against ML Systems. We plan to iterate on the framework based on feedback from the security     and adversarial machine learning community (please engage with us and help make the matrix better!). Net-Net: This is a *living document* that will be routinely updated.
+   -  Have feedback or improvements? We want in! See [Feedback](/pages/readme.md#feedback-and-getting-involved)
+2.  Only known bad is listed in the Matrix. Adversarial ML is an active area of research with new classes constantly being discovered. If you find a technique that is     not listed, please enlist it in the framework (see section on Feedback)
+3.  We are not prescribing definitive defenses at this point - The world of adversarial. We are already in conversations to add best practices in future revisions such     as adversarial training for adversarial examples, restricting the number of significant digits in confidence score for model stealing.
+4.  This is not a risk prioritization framework - The Threat Matrix only collates the known techniques; it does not provide a means to prioritize the risks.
+
+
 ## Structure of Adversarial ML Threat Matrix
 Because the Adversarial ML Threat Matrix is fashioned after [ATT&CK Enterprise](https://attack.mitre.org/matrices/enterprise/), it retains the terminologies: for instance, the column heads of the Threat Matrix are called "Tactics" and the individual entities are called "Techniques".
 
@@ -17,25 +26,17 @@ However, there are two main differences:
 
         Note: The Adversarial ML Threat Matrix is not yet part of the ATT&CK matrix.
 
-
-## Things to keep in mind before you use the framework:
-1.  This is a **first cut attempt** at collating known adversary techniques against ML Systems. We plan to iterate on the framework based on feedback from the security     and adversarial machine learning community (please engage with us and help make the matrix better!). Net-Net: This is a *living document* that will be routinely updated.
-   -  Have feedback or improvements? We want in! See [Feedback](/pages/readme.md#feedback-and-getting-involved)
-2.  Only known bad is listed in the Matrix. Adversarial ML is an active area of research with new classes constantly being discovered. If you find a technique that is     not listed, please enlist it in the framework (see section on Feedback)
-3.  We are not prescribing definitive defenses at this point - The world of adversarial. We are already in conversations to add best practices in future revisions such     as adversarial training for adversarial examples, restricting the number of significant digits in confidence score for model stealing.
-4.  This is not a risk prioritization framework - The Threat Matrix only collates the known techniques; it does not provide a means to prioritize the risks.
-
 |Legend                            | Description                                                                             |
 |:---:                             | :---                                                                                    |
 |![Cyber](/images/color_cyber.png) | Attacks not specific to ML, but useful for attacking ML systems.                        |
 |![AdvML](/images/color_advml.png) | Attacks specific to ML and not the underlying systems                                   |
-| **                               | Included ATT&CK techniques that have been modified to emphasize specfic AdvML scenarios | 
 
 ![Adversarial ML Threat Matrix](/images/AdvMLThreatMatrix.jpg)
 
 ## Adversarial ML Matrix - Description
 
 ### Reconnaissance
+
 
 #### ![AdvML](/images/color_advml.png)Acquire OSINT Information
 
