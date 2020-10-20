@@ -72,9 +72,9 @@ Jan/Feb 2021.Please register [here](https://docs.google.com/forms/d/e/1FAIpQLSdq
 We are especially excited for new case-studies! Before submitting a case-study, consider that the attack:
 1.  Exploits one or more vulnerabilities that compromises the confidentiality, integrity or availability of ML system 
 2.  The attack was against a *production, commercial* ML system. This can be on MLaaS like Amazon, Microsoft Azure, Google Cloud AI, IBM Watson etc; ML models on devices 
-3.  You have permission to share the information. Please follow the proper channels before reporting a new attack and that you are practicing responsible disclosure. If you have questions, please reach out to <Ram.Shankar@microsoft.com> and <Mikel@mitre.org>
+3.  You have permission to share the information. Please follow the proper channels before reporting a new attack and that you are practicing responsible disclosure.  
 
-If you satisfy all the three criteria: Email advmlthreatmatrix@googlegroups.com with summary of the incident and Adversarial ML Threat Matrix mapping. We 
+If you satisfy all the three criteria: Email <Ram.Shankar@microsoft.com> and <Mikel@mitre.org> with summary of the incident and Adversarial ML Threat Matrix mapping.
 
 
 **Join our Mailing List**
