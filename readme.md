@@ -4,7 +4,7 @@
     - [Why Adversarial ML Threat Matrix?](#why-adversarial-ml-threat-matrix)
     - [Structure of Adversarial ML Threat Matrix](/pages/adversarial-ml-threat-matrix.md#Structure-of-Adversarial-ML-Threat-Matrix)
     - [Things to keep in mind before you use the framework](/pages/things-to-keep-in-mind-before-you-use-the-framework.md)
-8. [Case Studies Page](/pages/case-studies-page.md)
+8. [Case Studies](/pages/case-studies-page.md)
     - [ClearviewAI Misconfiguration](/pages/case-studies-page.md#clearviewai-misconfiguration)
     - [GPT-2 Model Replication](/pages/case-studies-page.md#gpt-2-model-replication)
     - [ProofPoint Evasion](/pages/case-studies-page.md#proofpoint-evasion)
@@ -12,9 +12,9 @@
     - [Microsoft - Azure Service](/pages/case-studies-page.md#microsoft-red-team-exercise)
     - [Bosch - EdgeAI ](/pages/case-studies-page.md#bosch-team-experience-with-edgeai)
     - [Microsoft - EdgeAI](/pages/case-studies-page.md#microsoft--edgeAI)
-    - [MITRE -- Physical Adversarial Attack on Face Identification](/pages/case-studies-page.md#physical-adversarial-attack-on-face-identification)
+    - [MITRE - Physical Adversarial Attack on Face Identification](/pages/case-studies-page.md#physical-adversarial-attack-on-face-identification)
 5. [Contributors](#contributors)
-6. [Feedback](#feedback-and-getting-involved)
+6. [Feedback and Getting Involved](#feedback-and-getting-involved)
 6. [Contact Us](#contact-us)
 ---- 
 
