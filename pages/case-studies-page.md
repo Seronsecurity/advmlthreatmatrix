@@ -22,7 +22,7 @@ Attacks on machine learning (ML) systems are being developed and released with i
     <img src="/images/ClearviewAI.png" alt="ClearviewAI" width="275" height="150"/>
 
 ### GPT-2 Model Replication 
-**Summary of Incident:** : OpenAI built GPT-2, a powerful natural language model and calling it "too dangerous to release" adopted a staged-release process to incrementally release 1.5 Billion parameter model. Before the 1.5B parameter model could be released by OpenAI, two ML researchers replicated the model and released it to the public. *Note this is a model replication attack: Here, attacker is able to recover functionally equivalent model (but generally with lower fidelity), perhaps to do reconnaissance (See proof point attack). In Model stealing, the fidelity of the model is comparable to the original, victim model.*
+**Summary of Incident:** : OpenAI built GPT-2, a powerful natural language model and adopted a staged-release process to incrementally release 1.5 Billion parameter model. Before the 1.5B parameter model could be released by OpenAI eventually, two ML researchers replicated the model and released it to the public. *Note this is an example of model replication NOT model model extraction. Here, attacker is able to recover a functionally equivalent model but generally with lower fidelity than the orginal model, perhaps to do reconnaissance (See ProofPoint attack). In Model extraction, the fidelity of the model is comparable to the original, victim model.*
 
 **Reported by:** Vanya Cohen (@VanyaCohen), Aaron Gokaslan (@SkyLi0n) , Ellie Pavlick, Stefanie Tellex
 
