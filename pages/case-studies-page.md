@@ -10,69 +10,64 @@ Attacks on machine learning (ML) systems are being developed and released with i
 ### ClearviewAI Misconfiguration 
 **Summary of Incident:** Clearview AI's source code repository, though password protected, was misconfigured to allow an arbitrary user to register an account. This allowed an external researcher to gain access to a private code repository that contained Clearview AI production credentials, keys to cloud storage buckets containing 70K video samples, and copies of its applications and Slack tokens. With access to training data, a bad-actor has the ability to cause an arbitrary misclassificaion in the deployed model. 
 
-**Reported by:** Mossab Hussein (@mossab_hussein)
-
-**Source:**
--   [Clearview Source Code Lapse on TechCrunch](https://techcrunch.com/2020/04/16/clearview-source-code-lapse/amp/)
--   [We Found Clearview AI's Shady Face Recognition App](https://gizmodo.com/we-found-clearview-ais-shady-face-recognition-app-1841961772)
- 
 **Mapping to Adversarial Threat Matrix :**
 - In this scenario, a security researcher gained initial access to via a "Valid Account" that was created through a misconfiguration. No Adversarial ML techniques were used.
 - These kinds of attacks illustrate that any attempt to secure ML system should be on top of "traditional" good cybersecurity hygiene such as locking down the system with least privileges, multi factor authentication and monitoring and auditing.
 
 <img src="/images/ClearviewAI.png" alt="ClearviewAI" width="275" height="150"/>
 
+**Reported by:** 
+Mossab Hussein (@mossab_hussein)
+
+**Source:**
+-   [Clearview Source Code Lapse on TechCrunch](https://techcrunch.com/2020/04/16/clearview-source-code-lapse/amp/)
+-   [We Found Clearview AI's Shady Face Recognition App](https://gizmodo.com/we-found-clearview-ais-shady-face-recognition-app-1841961772)
+
 
 =======
 ### GPT-2 Model Replication 
+
 **Summary of Incident:** : OpenAI built GPT-2, a powerful natural language model and adopted a staged-release process to incrementally release 1.5 Billion parameter model. Before the 1.5B parameter model could be released by OpenAI eventually, two ML researchers replicated the model and released it to the public. *Note this is an example of model replication NOT model model extraction. Here, attacker is able to recover a functionally equivalent model but generally with lower fidelity than the orginal model, perhaps to do reconnaissance (See ProofPoint attack). In Model extraction, the fidelity of the model is comparable to the original, victim model.*
->>>>>>> 0061e5a628a7a921e736f1f95cd11a5386c0c3d3
 
-----
-
-## GPT-2 Model Replication 
-### Summary of Incident
-OpenAI built GPT-2 built a powerful natural language model and called it "too dangerous too release". Rather than release the largest GPT-2 model, OpenAI adopted a staged-release process to release smaller GPT-2 models and monitor for abuse before releasing the largest 1.5 Billion parameter model. Before the 1.5B parameter model was released by OpenAI, two ML researchers were able to replicate the model and subsequently released it to the public. 
-
-### Adversarial Threat Matrix Mapping
-1. Using public information about GPT-2, the researchers gathered similar datasets used during the original GPT-2 training. [A000X](link)
-2. Next, the researchers used a different publicly available ([A000X](link)) NLP model (called Grover) and modified Grover's objective function to reflect GPT-2's objective function.
-3. The researchers then trained the modified Grover on the dataset they curated, using Grover's initial hyperparameters, which resulted in their replicated model ([A000X](link))
+**Mapping to Adversarial Threat Matrix :**
+-   Using public documentation about GPT-2, ML researchers gathered similar datasets used during the original GPT-2 training.
+-   Next, they used a different publicly available NLP model (called Grover) and modified Grover's objective function to reflect
+    GPT-2's objective function,
+-   The researchers then trained the modified Grover on the dataset they curated, using Grover's initial hyperparameters, which
+    resulted in their replicated model.
   
 <img src="/images/OpenAI.png" alt="GPT2_Replication" width="275" height="150"/>
 
-### Impact
-In this model replication ([A000X](link))/stealing ([A000x](link)) attack, the researchers were able to recover a functionally equivalent model. While improving on baseline tasks via new and clever architectures is very much at the center of ML research, these researchers were able to replicate private functionality through public information. Orgnizations should carefully consider what information is released to the public through research papers, patents, and marketing materials.
-
-### Reported by
+**Reported by:**
 - Vanya Cohen (@VanyaCohen) 
 - Aaron Gokaslan (@SkyLi0n)
 - Ellie Pavlick
 - Stefanie Tellex
 
-### Sources
+**Sources**
 - [We Replicated GPT-2 Because You Can Too](https://blog.usejournal.com/opengpt-2-we-replicated-gpt-2-because-you-can-too-45e34e6d36dc)
 - [Dangerous AI](https://www.wired.com/story/dangerous-ai-open-source/)
 
 ----
 
 ## ProofPoint Evasion 
-### Summary of Incident
-Security researchers evaded ProofPoint's email protection system by first building a copy-cat email protection ML model, and using the offline model to discover insights to evade the online model. The research resulted in CVE-2019-20634. 
 
-### Adversarial Threat Matrix Mapping
-1. The researchers gathered a public dataset ([A000X](link)) of emails and used Proofpoints spam filter to label the emails. 
-2. Using these scores, the researchers replicated ([A000X](link)) the ML model by building a copy-cat ML model.
-3. Next, the ML researchers algorithmically found samples ([A000X](link)) that this "offline" copy cat model.
-4. Finally, these insights from the offline model allowed the researchers to create malicious emails that received preferrable scores from the real ProofPoint email protection system ([A000X](link)), hence bypassing it.
- 
+**Summary of Incident:** : CVE-2019-20634 describes how ML researchers evaded ProofPoint's email protection system by first building a copy-cat email protection ML model, and using the insights to evade the live system.
+
+**Mapping to Adversarial Threat Matrix :**
+-   The researchers first gathered the scores from the Proofpoint's ML system used in email email headers .
+-   Using these scores, the researchers replicated the ML mode by building a "shadow" aka copy-cat ML model
+-   Next, the ML researchers algorithmically found samples that this "offline" copy cat model
+-   Finally, these insights from the offline model allowed the researchers to create malicious emails that received preferrable
+    scores from the real ProofPoint email protection system, hence bypassing it.
+
 <img src="/images/ProofPoint.png" alt="PFPT_Evasion" width="625" height="175"/>
 
+**Reported by:**
+- Will Pearce (@moo_hax)
+- Nick Landers (@monoxgas)
 
-### Reported by
-- Will Pearce (@moo_hax) and Nick Landers (@monoxgas)
-
-### Sources
+**Sources**
 - [CVE-2019-20634](https://nvd.nist.gov/vuln/detail/CVE-2019-20634)
 - [42: The Answer to Life, The Universe, and Everything Offensive Security](https://github.com/moohax/Talks/blob/master/slides/DerbyCon19.pdf)
 - [Proof-Pudding](https://github.com/moohax/Proof-Pudding)
