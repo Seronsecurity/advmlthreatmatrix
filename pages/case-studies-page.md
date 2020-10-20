@@ -1,4 +1,4 @@
-## Case Studies Page
+# Case Studies
 Attacks on machine learning (ML) systems are being developed and released with increased regularity. Historically, attacks against ML systems have been performed in a controlled academic settings, but as these case-studies demonstrate, attacks are being seen in-the-wild. In production settings ML systems are trainined on PII, trusted to make critical decisions with little oversight, and have little to no logging and alerting attached to their use. The case-studies were selected because of the impact to a production ML systems, and each demonstrates one of the following characteristics.
 
 1. Range of Attacks: evasion, poisoning, model replication and exploiting traditional software flaws.
@@ -6,129 +6,184 @@ Attacks on machine learning (ML) systems are being developed and released with i
 3. Range of ML Paradigms: Attacks on MLaaS, ML models hosted on cloud, hosted on- presmise, ML models on edge
 4. Range of Use case: Attacks on ML systems used in both "security-sensitive" applications like cybersecurity and non-security-sensitive applications like chatbots
 
+## ClearviewAI Misconfiguration 
+### Summary of Incident
+Clearview AI's source code repository, though password protected, was misconfigured to allow an arbitrary user to register an account. This allowed an external researcher to gain access to source code, compiled applications, and files that contained production credentials, keys to cloud storage buckets, and copies of its applications and Slack tokens. With write access to training data, an attacker has the ability to cause an arbitrary misclassificaion in the deployed model via [data poisoning](link)  
 
-### ClearviewAI Misconfiguration 
-**Summary of Incident:** Clearview AI's source code repository, though password protected, was misconfigured to allow an arbitrary user to register an account. This allowed an external researcher to gain access to a private code repository that contained Clearview AI production credentials, keys to cloud storage buckets containing 70K video samples, and copies of its applications and Slack tokens. With access to training data, a bad-actor has the ability to cause an arbitrary misclassificaion in the deployed model. 
-
-**Reported by:** Mossab Hussein (@mossab_hussein)
-
-**Source:**
-    - https://techcrunch.com/2020/04/16/clearview-source-code-lapse/amp/
+In a separate incident, Clearview misconfigured S3 storage that gave public access to their Android application APK files. While researchers were able to reverse the application they did not have query access to the private database. Had researchers been able to query the database, a number of ML specific attacks come into scope - model stealing ([A0001](link)), membership inference ([A0002](link)), and model inversion ([A0003](link)).  
     
-**Mapping to Adversarial Threat Matrix :**
-- In this scenario, a security researcher gained initial access to via a "Valid Account" that was created through a misconfiguration. No Adversarial ML techniques were used.
-- these kinds of attacks illustrate that any attempt to secure ML system should be on top of "traditional" good cybersecurity hygiene such as locking down the system with least privileges, multi factor authentication and monitoring and auditing.
+### Adversarial Threat Matrix Mapping
+1. A security researcher gained initial access to Clearview infrastructure with a valid account ([T1078](https://attack.mitre.org/techniques/T1078/)) that was created through a misconfiguration of registration functionality for the repository.
+2. Through the access the researcher had access to training data and source code. 
 
-    <img src="/images/ClearviewAI.png" alt="ClearviewAI" width="275" height="150"/>
+<img src="/images/ClearviewAI.png" alt="ClearviewAI" width="275" height="150"/>
 
+### Impact
+Machine learning systems run on traditional infrastructure. This attack illustrates how ML systems are affected by vulnerabilities lower in the stack. This attack also demonstrates that organizations should secure their ML infrastructure as they would web applications or internal network resources by following secure configuration guidelines, applying principles of least privilege, enabling multi-factor authentication, and have logging and alerting in place.
+
+### Reported by
+- Mossab Hussein (@mossab_hussein)
+
+<<<<<<< HEAD
+### Sources 
+- [Clearview Source Code Lapse on TechCrunch](https://techcrunch.com/2020/04/16/clearview-source-code-lapse/amp/)
+- [We Found Clearview AI's Shady Face Recognition App](https://gizmodo.com/we-found-clearview-ais-shady-face-recognition-app-1841961772)
+=======
 ### GPT-2 Model Replication 
 **Summary of Incident:** : OpenAI built GPT-2, a powerful natural language model and adopted a staged-release process to incrementally release 1.5 Billion parameter model. Before the 1.5B parameter model could be released by OpenAI eventually, two ML researchers replicated the model and released it to the public. *Note this is an example of model replication NOT model model extraction. Here, attacker is able to recover a functionally equivalent model but generally with lower fidelity than the orginal model, perhaps to do reconnaissance (See ProofPoint attack). In Model extraction, the fidelity of the model is comparable to the original, victim model.*
+>>>>>>> 0061e5a628a7a921e736f1f95cd11a5386c0c3d3
 
-**Reported by:** Vanya Cohen (@VanyaCohen), Aaron Gokaslan (@SkyLi0n) , Ellie Pavlick, Stefanie Tellex
+----
 
-**Source:**
-    - https://blog.usejournal.com/opengpt-2-we-replicated-gpt-2-because-you-can-too-45e34e6d36dc
-    - https://www.wired.com/story/dangerous-ai-open-source/
+## GPT-2 Model Replication 
+### Summary of Incident
+OpenAI built GPT-2 built a powerful natural language model and called it "too dangerous too release". Rather than release the largest GPT-2 model, OpenAI adopted a staged-release process to release smaller GPT-2 models and monitor for abuse before releasing the largest 1.5 Billion parameter model. Before the 1.5B parameter model was released by OpenAI, two ML researchers were able to replicate the model and subsequently released it to the public. 
 
-**Mapping to Adversarial Threat Matrix :**
--   Using public documentation about GPT-2, ML researchers gathered similar datasets used during the original GPT-2 training.
--   Next, they used a different publicly available NLP model (called Grover) and modified Grover's objective function to reflect
-    GPT-2's objective function,
--   The researchers then trained the modified Grover on the dataset they curated, using Grover's initial hyperparameters, which
-    resulted in their replicated model.
+### Adversarial Threat Matrix Mapping
+1. Using public information about GPT-2, the researchers gathered similar datasets used during the original GPT-2 training. [A000X](link)
+2. Next, the researchers used a different publicly available ([A000X](link)) NLP model (called Grover) and modified Grover's objective function to reflect GPT-2's objective function.
+3. The researchers then trained the modified Grover on the dataset they curated, using Grover's initial hyperparameters, which resulted in their replicated model ([A000X](link))
   
-    <img src="/images/OpenAI.png" alt="GPT2" width="275" height="150"/>
+<img src="/images/OpenAI.png" alt="GPT2_Replication" width="275" height="150"/>
 
-### ProofPoint Evasion 
-**Summary of Incident:** : CVE-2019-20634 describes how ML researchers evaded ProofPoint's email protection system by first building a copy-cat email protection ML model, and using the insights to evade the live system.
+### Impact
+In this model replication ([A000X](link))/stealing ([A000x](link)) attack, the researchers were able to recover a functionally equivalent model. While improving on baseline tasks via new and clever architectures is very much at the center of ML research, these researchers were able to replicate private functionality through public information. Orgnizations should carefully consider what information is released to the public through research papers, patents, and marketing materials.
 
-**Reported by:** Will Pearce (@moo_hax), Nick Landers (@monoxgas)
-**Source:**
-    - https://nvd.nist.gov/vuln/detail/CVE-2019-20634
+### Reported by
+- Vanya Cohen (@VanyaCohen) 
+- Aaron Gokaslan (@SkyLi0n)
+- Ellie Pavlick
+- Stefanie Tellex
 
-**Mapping to Adversarial Threat Matrix :**
--   The researchers first gathered the scores from the Proofpoint's ML system used in email email headers .
--   Using these scores, the researchers replicated the ML mode by building a "shadow" aka copy-cat ML model
--   Next, the ML researchers algorithmically found samples that this "offline" copy cat model
--   Finally, these insights from the offline model allowed the researchers to create malicious emails that received preferrable
-    scores from the real ProofPoint email protection system, hence bypassing it.
+### Sources
+- [We Replicated GPT-2 Because You Can Too](https://blog.usejournal.com/opengpt-2-we-replicated-gpt-2-because-you-can-too-45e34e6d36dc)
+- [Dangerous AI](https://www.wired.com/story/dangerous-ai-open-source/)
+
+----
+
+## ProofPoint Evasion 
+### Summary of Incident
+Security researchers evaded ProofPoint's email protection system by first building a copy-cat email protection ML model, and using the offline model to discover insights to evade the online model. The research resulted in CVE-2019-20634. 
+
+### Adversarial Threat Matrix Mapping
+1. The researchers gathered a public dataset ([A000X](link)) of emails and used Proofpoints spam filter to label the emails. 
+2. Using these scores, the researchers replicated ([A000X](link)) the ML model by building a copy-cat ML model.
+3. Next, the ML researchers algorithmically found samples ([A000X](link)) that this "offline" copy cat model.
+4. Finally, these insights from the offline model allowed the researchers to create malicious emails that received preferrable scores from the real ProofPoint email protection system ([A000X](link)), hence bypassing it.
  
-    <img src="/images/ProofPoint.png" alt="PFPT" width="500" height="200"/>
+<img src="/images/ProofPoint.png" alt="PFPT_Evasion" width="625" height="175"/>
 
-### Tay Poisoning 
- **Summary of Incident:** Microsoft created Tay, a twitter chatbot for 18- to 24- year-olds in the U.S. for entertainment purposes. Within 24 hours of its deployment, Tay had to be decommissioned because it tweeted reprehrensible words.
- 
- **Source:**
-    - https://blogs.microsoft.com/blog/2016/03/25/learning-tays-introduction/
+### Impact
+Impact
 
-**Mapping to Adversarial Threat Matrix :**
--   Tay bot used the interactions with its twitter users as training data to improve its conversations.
--   Average users of Twitter coordinated together with the intent of defacing Tay bot by exploiting this feedback loop
--   As a result of this coordinated attack, Tay's training data was poisoned which led its conversation algorithms to generate more reprehensible material
+### Reported by
+- Will Pearce (@moo_hax) and Nick Landers (@monoxgas)
 
-  <img src="/images/Tay.png" alt="Tay" width="300" height="400"/>
+### Sources
+- [CVE-2019-20634](https://nvd.nist.gov/vuln/detail/CVE-2019-20634)
+- [42: The Answer to Life, The Universe, and Everything Offensive Security](https://github.com/moohax/Talks/blob/master/slides/DerbyCon19.pdf)
+- [Proof-Pudding](https://github.com/moohax/Proof-Pudding)
 
+----
 
-### Microsoft - Azure Service 
-**Summary of Incident:** : The Azure Red Team and Azure Trustworthy ML team performed a red team exercise on an internal Azure service with the intention of disrupting its service
+## Tay Poisoning 
+### Summary of Incident 
+Microsoft created Tay, a twitter chatbot for 18- to 24- year-olds in the U.S. for entertainment purposes. Within 24 hours of its deployment, Tay had to be decommissioned because it tweeted reprehrensible words.
 
-**Reported by:** Microsoft 
-**Mapping to Adversarial Threat Matrix :**
--   The team first performed reconnaissance to gather information about the target ML model
--   Then, using a valid account the team found the model file of the target ML model and the necessary training data
--   Using this, the red team performed an offline evasion attack by methodically searching for adversarial examples
--   Via an exposed API interface, the team performed an online evasion attack by replaying the adversarial examples, which helped achieve this goal.
--   This operation had a combination of traditional ATT&CK enterprise techniques such as finding Valid account, and Executing code via an API -- all interleaved with adversarial ML specific steps such as offline and online evasion examples.
+### Adversarial Threat Matrix Mapping
+1. Tay bot used the interactions with its twitter users as training data to improve its conversations.
+2. Average users of Twitter coordinated together with the intent of defacing Tay bot by exploiting this feedback loop
 
-<img src="/images/Msft1.PNG" alt="MSAzure" width="300" height="400"/>
+<img src="/images/Tay.png" alt="Tay_Poisoning" width="350" height="150"/>
 
-### Bosch - Evasion and Model Extraction Attack on Edge AI 
-**Summary of Incident:** : Bosch team performed a research exercise on an internal edge AI system with a dual intention to extract the model and craft adversarial example to evade
-**Reported by:** Manoj Parmar (@mparmar47)
-**Mapping to Adversarial Threat Matrix :**
--   The team first performed reconnaissance to gather information about the edge AI system device working with sensor interface
--   Then, using a trusted relationship mechanism between sensor and edge ai system team fed synthetic data on sensor to extract the model
--   Using this, the team performed an offline evasion attack by crafting adversarial example with help of extracted model
--   Via an exposed sensor interface, the team performed an online evasion attack by replaying the adversarial examples, which helped achieve this goal.
--   This operation had a combination of traditional ATT&CK industrial control system techniques such as supply chain compromise via sensor, and Executing code via sensor interface. all interleaved with adversarial ML specific steps such as,
-  - offline and online evasion examples.
-- The team was also able to reconstruct the edge ai system with extracted model
+### Impact
+As a result of this coordinated attack, Tay's training data was poisoned which led its conversation algorithms to generate more reprehensible material.
 
-<img src="/images/Bosch1.PNG" alt="BoschEdgeAI" width="300" height="400"/>
+### Reported by
+- Unknown
 
-### Microsoft – Evasion attack on EdgeAI 
-**Summary of Incident:** The Azure Red Team performed a red team exercise on a new Microsoft product designed for running AI workloads at the Edge.  
-**Reported by:** Microsoft  
-**Mapping to Adversarial Threat Matrix:**  
--   The team first performed reconnaissance to gather information about the target ML model
--   The team first performed reconnaissance to gather information about the target ML model
--   Then, used a publicly available version of the ML model, started sending queries and analyzing the responses (inferences) from the ML model. 
--   Using this, the red team created an automated system that continuously manipulated an original target image, that tricked the ML model into producing incorrect inferences, but the perturbations in the image were unnoticeable to the human eye. 
--   Feeding this perturbed image, the red team was able to evade the ML model into misclassifying the input image. 
--   This operation had one step in the traditional ATTACK MITRE technique to do reconnaissance on the ML model being used in the product, and then the rest of the techniques was to use Offline evasion, followed by online evasion of the targeted product. 
+### Sources
+- [Learning From Tays Introduction](https://blogs.microsoft.com/blog/2016/03/25/learning-tays-introduction/)
+- [Tay (bot)](https://en.wikipedia.org/wiki/Tay_(bot))  
+- [In 2016, Microsoft’s Racist Chatbot Revealed the Dangers of Online Conversation](https://spectrum.ieee.org/tech-talk/artificial-intelligence/machine-learning/in-2016-microsofts-racist-chatbot-revealed-the-dangers-of-online-conversation)
 
-<img src="/images/msft2.png" alt="MSEdgeAI" width="300" height="400"/>
+----
 
-### MITRE - Physical Adversarial Attack on Face Identification
+## Microsoft - Azure Service 
+### Summary of Incident
+The Azure Red Team and Azure Trustworthy ML team performed a red team exercise on an internal Azure service with the intention of disrupting its service
 
-**Summary of Incident:** MITRE’s AI Red Team demonstrated a physical-domain evasion attack on a commercial face identification service with the intention of inducing a targeted misclassification.
+### Adversarial Threat Matrix Mapping
+1. The team first performed reconnaissance to gather information about the target ML model
+2. Then, using a valid account the team found the model file of the target ML model and the necessary training data
+3. Using this, the red team performed an offline evasion attack by methodically searching for adversarial examples
+4. Via an exposed API interface, the team performed an online evasion attack by replaying the adversarial examples, which helped achieve this goal.
 
-**Reported by:** MITRE AI Red Team
+<img src="/images/Msft1.PNG" alt="MS_Azure" width="1025" height="185"/>
 
-**Mapping to Adversarial Threat Matrix:**
+### Impact
+This operation had a combination of traditional ATT&CK enterprise techniques such as finding Valid account, and Executing code via an API -- all interleaved with adversarial ML specific steps such as offline and online evasion examples.
 
-- The team first performed reconnaissance to gather information about the target ML model
-- Using a valid account, the team identified the list of IDs targeted by the model
-- The team developed a proxy model using open source data
-- Using the proxy model, the red team optimized a physical domain patch-based attack using an expectation of transformations
-- Via an exposed API interface, the team performed an online physical-domain evasion attack including the adversarial patch in the input stream which resulted in a targeted misclassification
-- This operation had a combination of traditional ATT&CK enterprise techniques such as finding Valid account, and Executing code via an API – all interleaved with adversarial ML specific attacks.
+### Reported by 
+- Azure Trustworthy Machine Learning 
 
-# Contributing New Case Studies
+### Sources
+- None
 
-We are especially excited for new case-studies! We look forward to contributions from both industry and academic researchers. Before submitting a case-study, consider that the attack:
-1.  Exploits one or more vulnerabilities that compromises the confidentiality, integrity or availability of ML system 
-2.  The attack was against a *production, commercial* ML system. This can be on MLaaS like Amazon, Microsoft Azure, Google Cloud AI, IBM Watson etc or ML systems embedded in client/edge. 
-3.  You have permission to share the information. Please follow the proper channels before reporting a new attack and make sure you are practicing responsible disclosure. If you are unsure, email advmlthreatmatrix-core@googlegroups.com and we can help you out. 
+----
 
-If you satisfy all the three criteria: Email advmlthreatmatrix-core@googlegroups.com with summary of the incident and Adversarial ML Threat Matrix mapping.
+## Bosch - EdgeAI 
+### Summary of Incident
+Bosch team performed a research exercise on an internal edge AI system with a dual intention to extract the model and craft adversarial example to evade
+
+### Adversarial Threat Matrix Mapping
+1. The team first performed reconnaissance to gather information about the edge AI system device working with sensor interface
+2. Then, using a trust relationship between sensor and edge ai system, the team fed synthetic data on sensor to extract the model
+3. Using this, the team performed an offline evasion attack by crafting adversarial example with help of extracted model
+4. Via an exposed sensor interface, the team performed an online evasion attack by replaying the adversarial examples, which helped achieve this goal.
+5. The team was also able to reconstruct the edge ai system with extracted model
+
+<img src="/images/Bosch1.PNG" alt="Bosch_EdgeAI" width="1025" height="185"/>
+
+### Impact
+This operation had a combination of traditional ATT&CK industrial control system techniques such as supply chain compromise via sensor, and Executing code via sensor interface. all interleaved with adversarial ML specific steps such as, offline and online evasion examples.
+
+### Reported by 
+- Manoj Parmar (@mparmar47)
+
+### Sources
+- None
+
+----
+
+## Microsoft – EdgeAI 
+### Summary of Incident
+The Azure Red Team performed a red team exercise on a new Microsoft product designed for running AI workloads at the Edge.  
+
+### Adversarial Threat Matrix Mapping
+1. The team first performed reconnaissance to gather information about the target ML model
+2. Then, used a publicly available version of the ML model, started sending queries and analyzing the responses (inferences) from the ML model. 
+3. Using this, the red team created an automated system that continuously manipulated an original target image, that tricked the ML model into producing incorrect inferences, but the perturbations in the image were unnoticeable to the human eye. 
+4. Feeding this perturbed image, the red team was able to evade the ML model into misclassifying the input image. 
+
+<img src="/images/msft2.png" alt="MS_EdgeAI" width="1025" height="185"/>
+
+### Impact
+This operation had one step in the traditional ATTACK MITRE technique to do reconnaissance on the ML model being used in the product, and then the rest of the techniques was to use offline evasion, followed by online evasion of the targeted product. 
+
+### Reported by 
+- Microsoft  
+
+### Sources
+- None
+
+### MITRE Physical Adversarial Examples
+- TBD 
+
+----
+# Contributing
+We welcome comments, feedback, or new case-studies! Before submitting a case-study, consider that the attack..
+
+1. Exploits one or more ML vulnerabilities, evasion, poisoning, model replication, or tradiationl security flaws that affect ML systems
+2. Is against a production system, Machine Learning as a Service (MLaaS), Models hosted on cloud (AzureML, AWS, GCP, etc), on-prem, or on the edge (Mobile, IOT, etc)
+3. Most importantly, you have permission to share the information. Please follow the proper channels before reporting a new attack. If you are unsure of how best disclose, the team here is happy to help coordinate responsible disclosure. 
