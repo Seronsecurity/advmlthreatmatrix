@@ -82,7 +82,7 @@ Attacks on machine learning (ML) systems are being developed and released with i
 
 <img src="/images/Msft1.PNG" alt="ClearviewAI" width="300" height="400"/>
 
-### Bosch - EdgeAI 
+### Bosch - Evasion and Model Extraction Attack on Edge AI 
 **Summary of Incident:** : Bosch team performed a research exercise on an internal edge AI system with a dual intention to extract the model and craft adversarial example to evade
 **Reported by:** Manoj Parmar (@mparmar47)
 **Mapping to Adversarial Threat Matrix :**
@@ -96,7 +96,7 @@ Attacks on machine learning (ML) systems are being developed and released with i
 
 <img src="/images/Bosch1.PNG" alt="ClearviewAI" width="300" height="400"/>
 
-### Microsoft – EdgeAI 
+### Microsoft – Evasion attack on EdgeAI 
 **Summary of Incident:** The Azure Red Team performed a red team exercise on a new Microsoft product designed for running AI workloads at the Edge.  
 **Reported by:** Microsoft  
 **Mapping to Adversarial Threat Matrix:**  
@@ -109,7 +109,7 @@ Attacks on machine learning (ML) systems are being developed and released with i
 
 <img src="/images/msft2.png" alt="ClearviewAI" width="300" height="400"/>
 
-### Physical Adversarial Attack
+### MITRE - Physical Adversarial Attack on Face Identification
 
 **Summary of Incident:** MITRE’s AI Red Team demonstrated a physical-domain evasion attack on a commercial face identification service with the intention of inducing a targeted misclassification.
 
