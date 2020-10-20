@@ -3,7 +3,7 @@
 2. [Adversarial ML Threat Matrix](/pages/adversarial-ml-threat-matrix.md)
     - [Why Adversarial ML Threat Matrix?](#why-adversarial-ml-threat-matrix)
     - [Structure of Adversarial ML Threat Matrix](/pages/adversarial-ml-threat-matrix.md#Structure-of-Adversarial-ML-Threat-Matrix)
-    - [Things to keep in mind before you use the framework](/pages/things-to-keep-in-mind-before-you-use-the-framework.md)
+    - [Things to keep in mind before you use the framework](/pages/adversarial-ml-threat-matrix.md#things-to-keep-in-mind-before-you-use-the-framework)
 8. [Case Studies](/pages/case-studies-page.md)
     - [ClearviewAI Misconfiguration](/pages/case-studies-page.md#clearviewai-misconfiguration)
     - [GPT-2 Model Replication](/pages/case-studies-page.md#gpt-2-model-replication)
