@@ -68,22 +68,28 @@ The Adversarial ML Threat Matrix is a first-cut attempt at collating a knowledge
 -   For a more hands on feedback session, we are partnering with Defcon's AI Village to open up the framework to all community members to get feedback and make it better. Current thinking is to have this event circa
 Jan/Feb 2021.Please register [here](https://docs.google.com/forms/d/e/1FAIpQLSdqtuE0v7qBRsGUUWDrzUEenHCdv-HNP1IiLil67dgpXtHqQw/viewform) for the workshop for more hands on feedback session
 
+**Contribute Case Studies**
+We are especially excited for new case-studies! Before submitting a case-study, consider that the attack:
+1.  Exploits one or more vulnerabilities that compromises the confidentiality, integrity or availability of ML system 
+2.  The attack was against a *production, commercial* ML system. This can be on MLaaS like Amazon, Microsoft Azure, Google Cloud AI, IBM Watson etc; ML models on devices 
+3.  You have permission to share the information. Please follow the proper channels before reporting a new attack and that you are practicing responsible disclosure. If you have questions, please reach out to <Ram.Shankar@microsoft.com> and <Mikel@mitre.org>
+
+If you satisfy all the three criteria: Email advmlthreatmatrix@googlegroups.com with summary of the incident and Adversarial ML Threat Matrix mapping. We 
+
+
 **Join our Mailing List**
 
 - For discussions around Adversarial ML Threat Matrix, we invite everyone to join our Google Group [here](https://groups.google.com/forum/#!forum/advmlthreatmatrix/join)
-- Google Groups may point you towards your personal email. If you want to access this forum using your corporate email (as opposed to your gmail)
+- Note: Google Groups generally defaults to your personal email. If you would rather access this forum using your corporate email (as opposed to your gmail)
   - Open your browser in Incognito mode.
-  - Once you sign up with your corporate, and complete captcha, you may
-  - Get an error, ignore it!
-  - Also note, emails from Google Forums generally go to "Other"/"Spam"
-    folder. So, you may want to create a rule to go into your inbox
-    instead
+  - Once you sign up with your corporate, and complete captcha, you may get an error. Ignore it!
+  - Also note, emails from Google Forums generally go to "Other"/"Spam" folder. So, you may want to create a rule to go into your inbox instead
 
  
  ## Contact Us
-For corrections and improvement, see [Feedback](#feedback-and-getting-involved)
+For corrections and improvement or to contribute a case study, see [Feedback](#feedback-and-getting-involved)
 
 For questions/comments/discussion: 
 -  Our public email group is advmlthreatmatrix@googlegroups.com. This emails all the members of the distribution group. 
--  For private questions/comments, please email: <Ram.Shankar@microsoft.com> and <Mikel@mitre.org>
+-  For private discussion, please email: <Ram.Shankar@microsoft.com> and <Mikel@mitre.org>
 
