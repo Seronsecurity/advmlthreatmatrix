@@ -4,7 +4,7 @@ Want to get involved? See [Feedback and Contact Information](#feedback)
 
 | **Organization**    | **Contributors**    |
 | :---                | :---                |
-| Microsoft           | Ram Shankar Siva Kumar, Hyrum Anderson, Will Pearce, Suzy Shapperle, Blake Strom, Madeline Carmichael, Matt Swann, Nick Beede, Kathy Vu, Andi Comissioneru, Sharon Xia, Mario Goertzel, Jeffrey Snover, Abhishek Gupta  |
+| Microsoft           | Ram Shankar Siva Kumar, Hyrum Anderson, Suzy Shapperle, Blake Strom, Madeline Carmichael, Matt Swann, Nick Beede, Kathy Vu, Andi Comissioneru, Sharon Xia, Mario Goertzel, Jeffrey Snover, Abhishek Gupta  |
 | MITRE               | Mikel D. Rodriguez, Christina E Liaghati, Keith R. Manville, Michael R Krumdick, Josh Harguess |
 | Bosch               | Manojkumar Parmar |
 | IBM                 | Pin-Yu Chen       |
