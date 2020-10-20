@@ -161,7 +161,7 @@ This operation had one step in the traditional ATTACK MITRE technique to do reco
 - None
 
 ----
-Contributing New Case Studies
+# Contributing New Case Studies
 
 We are especially excited for new case-studies! We look forward to contributions from both industry and academic researchers. Before submitting a case-study, consider that the attack:
 1.  Exploits one or more vulnerabilities that compromises the confidentiality, integrity or availability of ML system 
