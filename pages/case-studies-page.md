@@ -184,7 +184,7 @@ None
 
 We are especially excited for new case-studies! We look forward to contributions from both industry and academic researchers. Before submitting a case-study, consider that the attack:
 1.  Exploits one or more vulnerabilities that compromises the confidentiality, integrity or availability of ML system 
-2.  The attack was against a *production, commercial* ML system. This can be on MLaaS like Amazon, Microsoft Azure, Google Cloud AI, IBM Watson etc or ML systems embedded in client, edge or even hosted ML models. 
-3.  You have permission to share the information. Please follow the proper channels before reporting a new attack and make sure you are practicing responsible disclosure. If you are unsure, email advmlthreatmatrix-core@googlegroups.com and we can help you out.  
+2.  The attack was against a *production, commercial* ML system. This can be on MLaaS like Amazon, Microsoft Azure, Google Cloud AI, IBM Watson etc or ML systems embedded in client/edge. 
+3.  You have permission to share the information/published this research. Please follow the proper channels before reporting a new attack and make sure you are practicing responsible disclosure.
 
-If you satisfy all the three criteria: Email advmlthreatmatrix-core@googlegroups.com with summary of the incident, Adversarial ML Threat Matrix mapping, and public sources like blog, paper, github repo or news article. 
+You can email advmlthreatmatrix-core@googlegroups.com with summary of the incident and Adversarial ML Threat Matrix mapping.
