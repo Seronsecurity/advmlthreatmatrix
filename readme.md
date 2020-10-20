@@ -38,7 +38,6 @@ We recommend digging into [Adversarial ML Threat Matrix](/pages/adversarial-ml-t
 
 
 
-
 ![alt text](images/AdvMLThreatMatrix.jpg)
 
 
@@ -84,8 +83,8 @@ You can email advmlthreatmatrix-core@googlegroups.com with summary of the incide
 - For discussions around Adversarial ML Threat Matrix, we invite everyone to join our Google Group [here](https://groups.google.com/forum/#!forum/advmlthreatmatrix/join)
 - Note: Google Groups generally defaults to your personal email. If you would rather access this forum using your corporate email (as opposed to your gmail)
   - Open your browser in Incognito mode.
-  - Once you sign up with your corporate, and complete captcha, you may get an error. Ignore it!
-  - Also note, emails from Google Forums generally go to "Other"/"Spam" folder. So, you may want to create a rule to go into your inbox instead
+  - Once you sign up with your corporate, and complete captcha, you may get an error. Ignore it! There is also no confirmation email that you joined the group. 
+  - Also most email clients route emails from Google Groups into "Other"/"Spam"/"Forums" folder. So, you may want to create a rule in your email client to have these emails go  into your inbox instead. 
 
  
  ## Contact Us
@@ -94,5 +93,5 @@ For corrections and improvement or to contribute a case study, see [Feedback](#f
 
 -  For general questions/comments/discussion, our public email group is advmlthreatmatrix@googlegroups.com. This emails all the members of the distribution group. 
 -  To contact the Adversarial ML Leadership team, email advmlthreatmatrix-core@googlegroups.com
--  For private questions/comments and discussions, please email: <Ram.Shankar@microsoft.com> and <Mikel@mitre.org>
+-  For private questions/comments/discussions and how organizations can get involved in the effort, please email: <Ram.Shankar@microsoft.com> and <Mikel@mitre.org>
 
