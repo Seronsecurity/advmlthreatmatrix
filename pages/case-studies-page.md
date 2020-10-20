@@ -144,21 +144,40 @@ This operation had a combination of traditional ATT&CK industrial control system
 The Azure Red Team performed a red team exercise on a new Microsoft product designed for running AI workloads at the Edge.  
 
 ### Adversarial Threat Matrix Mapping
-1. The team first performed reconnaissance to gather information about the target ML model
-2. Then, used a publicly available version of the ML model, started sending queries and analyzing the responses (inferences) from the ML model. 
-3. Using this, the red team created an automated system that continuously manipulated an original target image, that tricked the ML model into producing incorrect inferences, but the perturbations in the image were unnoticeable to the human eye. 
-4. Feeding this perturbed image, the red team was able to evade the ML model into misclassifying the input image. 
+-   The team first performed reconnaissance to gather information about the target ML model
+-   The team first performed reconnaissance to gather information about the target ML model
+-   Then, used a publicly available version of the ML model, started sending queries and analyzing the responses (inferences) from the ML model. 
+-   Using this, the red team created an automated system that continuously manipulated an original target image, that tricked the ML model into producing incorrect inferences, but the perturbations in the image were unnoticeable to the human eye. 
+-   Feeding this perturbed image, the red team was able to evade the ML model into misclassifying the input image. 
 
 ![alt_text](/images/msft2.png)
 
-### Impact
-This operation had one step in the traditional ATTACK MITRE technique to do reconnaissance on the ML model being used in the product, and then the rest of the techniques was to use offline evasion, followed by online evasion of the targeted product. 
 
-### Reported by 
-- Microsoft  
+**Reported by:**
+Microsoft  
 
-### Sources
-- None
+**Sources:**
+None
+
+----
+## MITRE - Physical Adversarial Attack on Face Identification
+
+**Summary of Incident:** MITRE’s AI Red Team demonstrated a physical-domain evasion attack on a commercial face identification service with the intention of inducing a targeted misclassification.
+
+**Mapping to Adversarial Threat Matrix:**
+
+- The team first performed reconnaissance to gather information about the target ML model
+- Using a valid account, the team identified the list of IDs targeted by the model
+- The team developed a proxy model using open source data
+- Using the proxy model, the red team optimized a physical domain patch-based attack using an expectation of transformations
+- Via an exposed API interface, the team performed an online physical-domain evasion attack including the adversarial patch in the input stream which resulted in a targeted misclassification
+- This operation had a combination of traditional ATT&CK enterprise techniques such as finding Valid account, and Executing code via an API – all interleaved with adversarial ML specific attacks.
+
+**Reported by:** 
+MITRE AI Red Team
+
+**Sources:** 
+None
 
 ----
 # Contributing New Case Studies
