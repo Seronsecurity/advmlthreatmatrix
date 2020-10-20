@@ -11,7 +11,7 @@
     - [Tay Poisoning](/pages/case-studies-page.md#tay-poisoning)
     - [Microsoft - Azure Service](/pages/case-studies-page.md#microsoft-red-team-exercise)
     - [Bosch - EdgeAI ](/pages/case-studies-page.md#bosch-team-experience-with-edgeai)
-    - [Microsoft - EdgeAI](/pages/case-studies-page.md#microsoft---edgeAI)
+    - [Microsoft - EdgeAI](/pages/case-studies-page.md#microsoft--edgeAI)
     - [MITRE -- Physical Adversarial Attack on Face Identification](/pages/case-studies-page.md#physical-adversarial-attack-on-face-identification)
 5. [Contributors](#contributors)
 6. [Feedback](#feedback-and-getting-involved)
