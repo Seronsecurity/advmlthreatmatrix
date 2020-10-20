@@ -226,11 +226,12 @@ Adversaries may exfiltrate private information related to machine learning model
 
 Machine learning models' functionality can be stolen exploiting an inference API. This constitutes [Stolen Intellectual Property](#Stolen-Intellectual-Property).
 
-### ![Cyber](/images/color_cyber.png) Included ATT&CK Techniques
+#### ![Cyber](/images/color_cyber.png) Included ATT&CK Techniques
 <details> 
-<summary>Insecure Storage<summary>
+<summary>Insecure Storage</summary>
 
 Adversaries may exfiltrate proprietary machine learning models or private training and testing data by exploiting insecure storage mechanisms. Adversaries may [discover](#ML-Model-Discovery), and exfiltrate components of a ML pipeline, resulting in [Stolen Intellectual Property](#Stolen-Intellectual-Property)
+
 </details>
 
 ### Impact
@@ -255,19 +256,25 @@ One example of this type of attack is Sponge attack.
 #### ![Cyber](/images/color_cyber.png) Included ATT&CK Techniques
 <details>
 <summary>Stolen Intellectual Property</summary>
+
 Adversaries may steal intellectual property by [Model Replication](#ML-Model-Replication) or [Model Stealing](#ML-Model-Stealing).
+
 </details>
 
 <details>
 <summary>Data Encrypted for Impact</summary>
+
 Adversaries may encrypt data on target systems or on large numbers of systems in a network to interrupt availability to system and network resources. They can attempt to render stored data inaccessible by encrypting files or data on local and remote drives and withholding access to a decryption key. This may be done in order to extract monetary compensation from a victim in exchange for decryption or a decryption key (ransomware) or to render data permanently inaccessible in cases where the key is not saved or transmitted.(Citation: US-CERT Ransomware 2016)(Citation: FireEye WannaCry 2017)(Citation: US-CERT NotPetya 2017)(Citation: US-CERT SamSam 2018) In the case of ransomware, it is typical that common user files like Office documents, PDFs, images, videos, audio, text, and source code files will be encrypted. In some cases, adversaries may encrypt critical system files, disk partitions, and the MBR.(Citation: US-CERT NotPetya 2017)
 
 To maximize impact on the target organization, malware designed for encrypting data may have worm-like features to propagate across a network by leveraging other attack techniques like [Valid Accounts](https://attack.mitre.org/techniques/T1078), [OS Credential Dumping](https://attack.mitre.org/techniques/T1003), and [SMB/Windows Admin Shares](https://attack.mitre.org/techniques/T1021/002).(Citation: FireEye WannaCry 2017)(Citation: US-CERT NotPetya 2017)
 </details>
 
 <details>
+
 <summary>Stop System Shutdown/Reboot</summary>
+
 Stub
+
 </details>
 
 ### References
