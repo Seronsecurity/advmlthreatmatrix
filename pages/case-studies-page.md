@@ -127,9 +127,7 @@ Bosch team performed a research exercise on an internal edge AI system with a du
 3. Using this, the team performed an offline evasion attack by crafting adversarial example with help of extracted model
 4. Via an exposed sensor interface, the team performed an online evasion attack by replaying the adversarial examples, which helped achieve this goal.
 5. The team was also able to reconstruct the edge ai system with extracted model
-
 ![alt](/images/Bosch1.PNG)
-
 ### Impact
 This operation had a combination of traditional ATT&CK industrial control system techniques such as supply chain compromise via sensor, and Executing code via sensor interface. ll interleaved with adversarial ML specific steps such as, offline and online evasion examples.
 
@@ -151,7 +149,7 @@ The Azure Red Team performed a red team exercise on a new Microsoft product desi
 3. Using this, the red team created an automated system that continuously manipulated an original target image, that tricked the ML model into producing incorrect inferences, but the perturbations in the image were unnoticeable to the human eye. 
 4. Feeding this perturbed image, the red team was able to evade the ML model into misclassifying the input image. 
 
-<img src="/images/msft2.png" alt="MS_EdgeAI" width="400" height="200"/>
+![alt_text](/images/msft2.png)
 
 ### Impact
 This operation had one step in the traditional ATTACK MITRE technique to do reconnaissance on the ML model being used in the product, and then the rest of the techniques was to use offline evasion, followed by online evasion of the targeted product. 
