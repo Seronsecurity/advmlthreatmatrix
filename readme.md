@@ -69,12 +69,12 @@ The Adversarial ML Threat Matrix is a first-cut attempt at collating a knowledge
 Jan/Feb 2021.Please register [here](https://docs.google.com/forms/d/e/1FAIpQLSdqtuE0v7qBRsGUUWDrzUEenHCdv-HNP1IiLil67dgpXtHqQw/viewform) for the workshop for more hands on feedback session
 
 **Contribute Case Studies**
-We are especially excited for new case-studies! Before submitting a case-study, consider that the attack:
+We are especially excited for new case-studies! We look forward to contributions from both industry and academic researchers. Before submitting a case-study, consider that the attack:
 1.  Exploits one or more vulnerabilities that compromises the confidentiality, integrity or availability of ML system 
 2.  The attack was against a *production, commercial* ML system. This can be on MLaaS like Amazon, Microsoft Azure, Google Cloud AI, IBM Watson etc; ML models on devices 
 3.  You have permission to share the information. Please follow the proper channels before reporting a new attack and that you are practicing responsible disclosure.  
 
-If you satisfy all the three criteria: Email <Ram.Shankar@microsoft.com> and <Mikel@mitre.org> with summary of the incident and Adversarial ML Threat Matrix mapping.
+If you satisfy all the three criteria: Email advmlthreatmatrix-core@googlegroups.com with summary of the incident and Adversarial ML Threat Matrix mapping.
 
 
 **Join our Mailing List**
@@ -89,7 +89,8 @@ If you satisfy all the three criteria: Email <Ram.Shankar@microsoft.com> and <Mi
  ## Contact Us
 For corrections and improvement or to contribute a case study, see [Feedback](#feedback-and-getting-involved)
 
-For questions/comments/discussion: 
--  Our public email group is advmlthreatmatrix@googlegroups.com. This emails all the members of the distribution group. 
--  For private discussion, please email: <Ram.Shankar@microsoft.com> and <Mikel@mitre.org>
+
+-  For general questions/comments/discussion, our public email group is advmlthreatmatrix@googlegroups.com. This emails all the members of the distribution group. 
+-  To contact the Adversarial ML Leadership team, email advmlthreatmatrix-core@googlegroups.com
+-  For private questions/comments and discussions, please email: <Ram.Shankar@microsoft.com> and <Mikel@mitre.org>
 
