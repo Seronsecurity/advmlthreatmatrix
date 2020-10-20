@@ -1,7 +1,7 @@
 # Table of Contents
 1. [Adversarial ML 101](/pages/adversarial-ml-101.md)
 2. [Adversarial ML Threat Matrix](/pages/adversarial-ml-threat-matrix.md)
-    - [Why Adversarial ML Threat Matrix?](#why-adversarial-ml-threat-matrix)
+    - [Why Develop Adversarial ML Threat Matrix?](#why-develop-adversarial-ml-threat-matrix)
     - [Structure of Adversarial ML Threat Matrix](/pages/adversarial-ml-threat-matrix.md#Structure-of-Adversarial-ML-Threat-Matrix)
     - [Things to keep in mind before you use the framework](/pages/adversarial-ml-threat-matrix.md#things-to-keep-in-mind-before-you-use-the-framework)
 8. [Case Studies](/pages/case-studies-page.md)
@@ -25,7 +25,7 @@ If you are new to how ML systems can be attacked, we suggest starting at this no
 
 Or if you want to dive right in, head to [Adversarial ML Threat Matrix](/pages/adversarial-ml-threat-matrix.md)
 
-## Why Adversarial ML Threat Matrix? 
+## Why Develop Adversarial ML Threat Matrix? 
 1.  In the last three years, major companies such as [Google](https://www.zdnet.com/article/googles-best-image-recognition-system-flummoxed-by-fakes/), [Amazon](https://www.fastcompany.com/90240975/alexa-can-be-hacked-by-chirping-birds), [Microsoft](https://www.theguardian.com/technology/2016/mar/24/tay-microsofts-ai-chatbot-gets-a-crash-course-in-racism-from-twitter), and [Tesla](https://spectrum.ieee.org/cars-that-think/transportation/self-driving/three-small-stickers-on-road-can-steer-tesla-autopilot-into-oncoming-lane), have had their ML systems tricked, evaded, or misled.
 2.  This trend is only set to rise: According to [Gartner report](https://www.gartner.com/doc/3939991). 30% of cyberattacks by 2022 will involve data poisoning, model     theft or adversarial examples.
 3.  However, industry is underprepared. In a [survey](https://arxiv.org/pdf/2002.05646.pdf) of 28 organizations spanning small as well as large organizations, 25           organizations did not know how to secure their ML systems.
