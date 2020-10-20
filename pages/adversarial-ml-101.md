@@ -1,9 +1,8 @@
 # Adversarial Machine Learning 101 
-Machine learning systems are affected by a unique class of vulnerabilities and Adversarial Machine Learning describes the set of techniques that aim to exploit these issues. Adversaries can use these techniques to manipulate ML systems in order to gain a desired outcome from a deployed model. The impact of a successful attack will vary depending on the use case of the model. For example, compromise of a model that is trained on PII versus compromise of a model trained to classify images of pets. In machine learning attacks there is just enough nuance to make reading about them a little confusing. Before characterizing attacks, there are some important terms and concepts to be aware of.
+Informally, Adversarial ML is “subverting machine learning systems for fun and profit”. The methods underpinning the production machine learning systems are systematically vulnerable to a new class of vulnerabilities across the machine learning supply chain collectively known as Adversarial Machine Learning. Adversaries can exploit these vulnerabilities to manipulate AI systems in order to alter their behavior to serve a malicious end goal.
 
-The picture below...
+Consider a typical ML pipeline shown in the left that is gated behind an API, wherein the only way to use the model is to send a query and observe an response.  In this example, we assume a blackbox setting: the attacker does NOT have direct access to the training data, no knowledge of the algorithm used and no source code of the model. The attacker only queries the model and observes the response. 
 
-![Adversarial ML 101](/images/AdvML101.PNG)
 
 **End-to-End vs Hand-Crafted features:** 
 
@@ -15,7 +14,12 @@ Training refers to the process by which data is modeled. This process includes c
 
 **Online vs Offline:**
 
-An "online" model is typically the production model. An "offline" model represents a local copy of a model. For example, if an attacker has a local copy of a model.
+An "online" model is typically the production model. An "offline" model represents a local copy of a model.  
+
+With this in mind, we can jump into the attacks on ML systems 
+
+![Adversarial ML 101](/images/AdvML101.PNG)
+
 
 # Machine Learning Attacks
 Attacks on machine learning systems can be categorized as follows.
@@ -28,21 +32,6 @@ Attacks on machine learning systems can be categorized as follows.
 | Model Inversion 	    | Attacker recovers the features used to train the model. A successful attack would result in an attacker being able to launch a Membership inference attack. This attack could result in compromise of private data | Inference | 
 | Traditional Attacks   | Attacker uses well established TTPs to attain their goal. | Both |
 
-
-----
-**Okay, but what is an "ML System"?**
-
-This is a generic term that refers to that not only describes the inclusion of machine learning into other systems, but also the interaction with its dependencies. An ML system could be a single server that hosts a model, an MLOps pipeline, data collection processes, self-driving cars, robots, and of course skynet. Each component of an ML System can be attacked individually without necessarily causing impact or implying compromise other the other. 
-
-![ML System](/images/mlsystem.PNG.jpg)
-
-#### Attacks on Machine Learning Components
-Consider a successful Functional Extraction attack via an exposed web api.  The attacker now has a functionally equivalent copy of the model that can be use to perform an online attack. By extension, if a peripheral system or process relies on the output to make a decision, the attacker has successfully exploited the ML system and was not required to compromise any of the underlying dependencies.
-
-Next, suppose an attacker has access to an ML development service (Apache Airflow, Dash, etc) that exposes a load_model() function in which a serialized model is deserialzed and loaded for use. If the attacker is successful in getting their malcious object deserialized, they would have remote code execution within this service. Again, the attacker was not required to compromise any of the underlying dependencies.
-
-#### Attack on Underlying Dependencies
-Attacks on these systems are well known and documented. Access to the underlying system components implies postive control over one or more machine learning components.
 
 # Attack Scenarios
 ## Attack Scenario #1: API Deployment
