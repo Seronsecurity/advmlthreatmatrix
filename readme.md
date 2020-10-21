@@ -1,7 +1,7 @@
 # Table of Contents
-1. [Adversarial ML 101](/pages/adversarial-ml-101.md)
+1. [Adversarial ML 101](/pages/adversarial-ml-101.md#adversarial-machine-learning-101)
 2. [Adversarial ML Threat Matrix](/pages/adversarial-ml-threat-matrix.md)
-3. [Case Studies](/pages/case-studies-page.md)
+3. [Case Studies](pages/adversarial-ml-threat-matrix.md#adversarial-ml-threat-matrix)
 4. [Contributors](#contributors)
 5. [Feedback and Getting Involved](#feedback-and-getting-involved)
     - [Join Our Mailing List](#join-our-mailing-list)
