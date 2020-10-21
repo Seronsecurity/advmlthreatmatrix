@@ -1,6 +1,6 @@
 ## Contributors
 
-Want to get involved? See [Feedback and Contact Information](#feedback)
+Want to get involved? See [Feedback and Contact Information](/readme.md#feedback-and-getting-involved)
 
 | **Organization**    | **Contributors**    |
 | :---                | :---                |
