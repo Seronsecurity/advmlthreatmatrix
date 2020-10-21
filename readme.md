@@ -52,7 +52,7 @@ We recommend digging into [Adversarial ML Threat Matrix](/pages/adversarial-ml-t
 | NVIDIA              | David Reber Jr., Keith Kozo, Christopher Cottrell, Daniel Rohrer |
 | Airbus              | Adam Wedgbury     |
 | Deep Instinct       | Nadav Maman       |
-| TwoSix              | David Slater      |
+| Two Six Labs        | David Slater      |
 | University of Toronto | Adelin Travers, Jonas Guan, Nicolas Papernot |
 | Cardiff University  | Pete Burnap |
 | Software Engineering Institute/Carnegie Mellon University | Nathan M. VanHoudnos | 
