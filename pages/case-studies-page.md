@@ -109,7 +109,7 @@ Attacks on machine learning (ML) systems are being developed and released with i
 **Reported by:**
 - Microsoft (Azure Trustworthy Machine Learning)
 
-**Sources:**
+**Source:**
 - None
 
 ----
@@ -150,7 +150,7 @@ Attacks on machine learning (ML) systems are being developed and released with i
 **Reported by:**
 Microsoft  
 
-**Sources:**
+**Source:**
 None
 
 ----
@@ -170,7 +170,7 @@ None
 **Reported by:** 
 MITRE AI Red Team
 
-**Sources:** 
+**Source:** 
 None
 
 ----
