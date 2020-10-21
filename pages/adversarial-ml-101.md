@@ -41,7 +41,7 @@ Consider that an attacker has control over training data. This flavor of attack 
 
 
 ## Attack Scenario #3: Attack on Edge/Client
-Consider that a model exists on a client (like a phone) or on the edge (such as IoT) . An attacker might have access to model code through reversing the service on the client. This flavor of attack is shown in [Bosch Case Study with EdgeAI ](/pages/case-studies-page.md#bosch-team-experience-with-edgeai).
+Consider that a model exists on a client (like a phone) or on the edge (such as IoT) . An attacker might have access to model code through reversing the service on the client. This flavor of attack is shown in [Bosch Case Study with EdgeAI](/pages/case-studies-page.md#bosch-team-experience-with-edgeai).
 
 ![Adversarial ML 101](/images/AdvML101_Client.PNG)
 
