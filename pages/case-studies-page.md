@@ -104,7 +104,8 @@ Attacks on machine learning (ML) systems are being developed and released with i
 -   Via an exposed API interface, the team performed an online evasion attack by replaying the adversarial examples, which helped achieve this goal.
 -   This operation had a combination of traditional ATT&CK enterprise techniques such as finding Valid account, and Executing code via an API -- all interleaved with adversarial ML specific steps such as offline and online evasion examples.
 
-<img src="/images/Msft1.PNG" alt="MS_Azure" width="1025" height="185"/>
+![MS_Azure](/images/Msft1.PNG)
+
 
 **Reported by:**
 - Microsoft (Azure Trustworthy Machine Learning)
@@ -125,6 +126,8 @@ Attacks on machine learning (ML) systems are being developed and released with i
 -   This operation had a combination of traditional ATT&CK industrial control system techniques such as supply chain compromise via sensor, and Executing code via sensor interface. all interleaved with adversarial ML specific steps such as,
   - offline and online evasion examples.
 - The team was also able to reconstruct the edge ai system with extracted model
+
+![alt_text](/images/Bosch1.PNG)
 
 **Reported by:** 
 - Manoj Parmar (@mparmar47)
