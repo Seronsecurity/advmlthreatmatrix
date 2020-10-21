@@ -9,7 +9,7 @@
     - [GPT-2 Model Replication](/pages/case-studies-page.md#gpt-2-model-replication)
     - [ProofPoint Evasion](/pages/case-studies-page.md#proofpoint-evasion)
     - [Tay Poisoning](/pages/case-studies-page.md#tay-poisoning)
-    - [Microsoft - Azure Service - Evasion](/pages/case-studies-page.md#microsoft-red-team-exercise)
+    - [Microsoft - Azure Service - Evasion](/pages/case-studies-page.md#microsoft-azure-service)
     - [Bosch Edge AI - Evasion and Model Extraction](/pages/case-studies-page.md#bosch---evasion-and-model-extraction-attack-on-edge-ai)
     - [Microsoft Edge AI - Evasion](r/pages/case-studies-page.md#microsoft--evasion-attack-on-edgeai)
     - [MITRE - Physical Adversarial Attack on Face Identification](/pages/case-studies-page.md#physical-adversarial-attack-on-face-identification)
