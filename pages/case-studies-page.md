@@ -167,6 +167,8 @@ None
 - Via an exposed API interface, the team performed an online physical-domain evasion attack including the adversarial patch in the input stream which resulted in a targeted misclassification
 - This operation had a combination of traditional ATT&CK enterprise techniques such as finding Valid account, and Executing code via an API – all interleaved with adversarial ML specific attacks.
 
+![mitre](/images/mitre.png)
+
 **Reported by:** 
 MITRE AI Red Team
 
