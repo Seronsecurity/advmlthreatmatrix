@@ -6,8 +6,9 @@ Attacks on machine learning (ML) systems are being developed and released with i
 3. Range of ML Paradigms: Attacks on MLaaS, ML models hosted on cloud, hosted on- presmise, ML models on edge
 4. Range of Use case: Attacks on ML systems used in both "security-sensitive" applications like cybersecurity and non-security-sensitive applications like chatbots
 
+----
 
-### ClearviewAI Misconfiguration 
+## ClearviewAI Misconfiguration 
 **Summary of Incident:** Clearview AI's source code repository, though password protected, was misconfigured to allow an arbitrary user to register an account. This allowed an external researcher to gain access to a private code repository that contained Clearview AI production credentials, keys to cloud storage buckets containing 70K video samples, and copies of its applications and Slack tokens. With access to training data, a bad-actor has the ability to cause an arbitrary misclassificaion in the deployed model. 
 
 **Mapping to Adversarial Threat Matrix :**
@@ -25,7 +26,7 @@ Attacks on machine learning (ML) systems are being developed and released with i
 
 ----
 
-### GPT-2 Model Replication 
+## GPT-2 Model Replication 
 
 **Summary of Incident:** : OpenAI built GPT-2, a powerful natural language model and adopted a staged-release process to incrementally release 1.5 Billion parameter model. Before the 1.5B parameter model could be released by OpenAI eventually, two ML researchers replicated the model and released it to the public. *Note this is an example of model replication NOT model model extraction. Here, attacker is able to recover a functionally equivalent model but generally with lower fidelity than the orginal model, perhaps to do reconnaissance (See ProofPoint attack). In Model extraction, the fidelity of the model is comparable to the original, victim model.*
 
@@ -104,7 +105,8 @@ Attacks on machine learning (ML) systems are being developed and released with i
 -   Via an exposed API interface, the team performed an online evasion attack by replaying the adversarial examples, which helped achieve this goal.
 -   This operation had a combination of traditional ATT&CK enterprise techniques such as finding Valid account, and Executing code via an API -- all interleaved with adversarial ML specific steps such as offline and online evasion examples.
 
-<img src="/images/Msft1.PNG" alt="MS_Azure" width="1025" height="185"/>
+![MS_Azure](/images/Msft1.PNG)
+
 
 **Reported by:**
 - Microsoft (Azure Trustworthy Machine Learning)
@@ -125,6 +127,8 @@ Attacks on machine learning (ML) systems are being developed and released with i
 -   This operation had a combination of traditional ATT&CK industrial control system techniques such as supply chain compromise via sensor, and Executing code via sensor interface. all interleaved with adversarial ML specific steps such as,
   - offline and online evasion examples.
 - The team was also able to reconstruct the edge ai system with extracted model
+
+![alt_text](/images/Bosch1.PNG)
 
 **Reported by:** 
 - Manoj Parmar (@mparmar47)
@@ -166,6 +170,8 @@ None
 - Using the proxy model, the red team optimized a physical domain patch-based attack using an expectation of transformations
 - Via an exposed API interface, the team performed an online physical-domain evasion attack including the adversarial patch in the input stream which resulted in a targeted misclassification
 - This operation had a combination of traditional ATT&CK enterprise techniques such as finding Valid account, and Executing code via an API – all interleaved with adversarial ML specific attacks.
+
+![mitre](/images/mitre.png)
 
 **Reported by:** 
 MITRE AI Red Team
