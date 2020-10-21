@@ -18,12 +18,12 @@
 6. [Contact Us](#contact-us)
 ---- 
 
-The goal of this project is to position attacks on machine learning (ML) systems in an ATT&CK-style framework so that security analysts can orient themselves
+The goal of this project is to position attacks on machine learning (ML) systems in an [ATT&CK](https://attack.mitre.org/)-style framework so that security analysts can orient themselves
 to these new and upcoming threats.
 
 If you are new to how ML systems can be attacked, we suggest starting at this no-frills [Adversarial ML 101](/pages/adversarial-ml-101.md) aimed at security analysts. 
 
-Or if you want to dive right in, head to [Adversarial ML Threat Matrix](/pages/adversarial-ml-threat-matrix.md)
+Or if you want to dive right in, head to [Adversarial ML Threat Matrix](/pages/adversarial-ml-threat-matrix.md).
 
 ## Why Develop Adversarial ML Threat Matrix? 
 -   In the last three years, major companies such as [Google](https://www.zdnet.com/article/googles-best-image-recognition-system-flummoxed-by-fakes/), [Amazon](https://www.fastcompany.com/90240975/alexa-can-be-hacked-by-chirping-birds), [Microsoft](https://www.theguardian.com/technology/2016/mar/24/tay-microsofts-ai-chatbot-gets-a-crash-course-in-racism-from-twitter), and [Tesla](https://spectrum.ieee.org/cars-that-think/transportation/self-driving/three-small-stickers-on-road-can-steer-tesla-autopilot-into-oncoming-lane), have had their ML systems tricked, evaded, or misled.
@@ -67,12 +67,12 @@ The Adversarial ML Threat Matrix is a first-cut attempt at collating a knowledge
 
 -   For immediate corrections, please submit a Pull Request with suggested changes! We are excited to make this system better with you!
 -   For a more hands on feedback session, we are partnering with Defcon's AI Village to open up the framework to all community members to get feedback and make it better. Current thinking is to have this workshop circa
-Jan/Feb 2021.Please register [here](https://docs.google.com/forms/d/e/1FAIpQLSdqtuE0v7qBRsGUUWDrzUEenHCdv-HNP1IiLil67dgpXtHqQw/viewform)
+Jan/Feb 2021. Please register [here](https://docs.google.com/forms/d/e/1FAIpQLSdqtuE0v7qBRsGUUWDrzUEenHCdv-HNP1IiLil67dgpXtHqQw/viewform).
 
 **Contribute Case Studies**
 
 We are especially excited for new case-studies! We look forward to contributions from both industry and academic researchers. Before submitting a case-study, consider that the attack:
-1.  Exploits one or more vulnerabilities that compromises the confidentiality, integrity or availability of ML system 
+1.  Exploits one or more vulnerabilities that compromises the confidentiality, integrity or availability of ML system. 
 2.  The attack was against a *production, commercial* ML system. This can be on MLaaS like Amazon, Microsoft Azure, Google Cloud AI, IBM Watson etc or ML systems embedded in client/edge. 
 3.  You have permission to share the information/published this research. Please follow the proper channels before reporting a new attack and make sure you are practicing responsible disclosure.
 
@@ -81,15 +81,15 @@ You can email advmlthreatmatrix-core@googlegroups.com with summary of the incide
 
 **Join our Mailing List**
 
-- For discussions around Adversarial ML Threat Matrix, we invite everyone to join our Google Group [here](https://groups.google.com/forum/#!forum/advmlthreatmatrix/join)
-- Note: Google Groups generally defaults to your personal email. If you would rather access this forum using your corporate email (as opposed to your gmail)
+- For discussions around Adversarial ML Threat Matrix, we invite everyone to join our Google Group [here](https://groups.google.com/forum/#!forum/advmlthreatmatrix/join).
+- Note: Google Groups generally defaults to your personal email. If you would rather access this forum using your corporate email (as opposed to your gmail).
   - Open your browser in Incognito mode.
   - Once you sign up with your corporate, and complete captcha, you may get an error. Ignore it! There is also no confirmation email that you joined the group. 
   - Also most email clients route emails from Google Groups into "Other"/"Spam"/"Forums" folder. So, you may want to create a rule in your email client to have these emails go  into your inbox instead. 
 
  
  ## Contact Us
-For corrections and improvement or to contribute a case study, see [Feedback](#feedback-and-getting-involved)
+For corrections and improvement or to contribute a case study, see [Feedback](#feedback-and-getting-involved).
 
 
 -  For general questions/comments/discussion, our public email group is advmlthreatmatrix@googlegroups.com. This emails all the members of the distribution group. For specific questions regarding contributing new case studies, email advmlthreatmatrix-core@googlegroups.com. This emails all the core contributors. 
