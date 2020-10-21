@@ -51,7 +51,7 @@ Adversaries may attempt to identify machine learning pipelines that exist on the
 > 
 >
 > ##### ![AdvML](/images/color_advml.png)Reveal ML Model Family
-> Here the specifics of ML Models are not known and can generally be thought of as blackbox attacks. The attacker is able to only glean the model task, model input and model output. But because of the nature of the blog posts or papers that are published, some metion of the algorithms are inevitable. 
+> Here the specifics of ML Models are not known and can generally be thought of as blackbox attacks. The attacker is able to only glean the model task, model input and model output. But because of the nature of the blog posts or papers that are published, some metion of the algorithms such as "Deep Learning" may squarely indicate that the underlying algorithm is gradient based.  
 
 
 #### ![AdvML](/images/color_advml.png)Gathering Datasets
@@ -66,17 +66,17 @@ In addition to the attacks that take place purely in the digital domain, adversa
 
 Stub
 
-> ##### ![AdvML](/images/color_advml.png)Exploit API
+> ##### ![AdvML](/images/color_advml.png)Exploit API - Shadow Model 
 >
-> An adversary my replicate a machine learning model's functionality by exploiting its inference API.
+> An adversary may replicate a machine learning model's functionality by exploiting its inference API. In this case of model replication, the attacker repeatedly queries the victim's inference API and uses it as an oracle to collect combination of data and label. From the combination of (data,label), the attacker builds a shadown model, that effectively functions as the victim model -- but with lower fidelity. This is generally the 
 >
 > ##### ![AdvML](/images/color_advml.png)Pre-Trained Weights
 >
-> Once made publicly available, an adversary may use pre-trained weights to replicate a model's functionality.
+> An adversary uses pre-trained weights of one model to replicate a related model's functionality. For instance, researchers wanted to replicated GPT-2, a large language model. So, the researchers used the pre-trained weights of Grover, another NLP model, and modified it using GPT-2's objective function and training data, which effectively resulted in a shadown GPT-2 model (though with lower fidelity) 
 
 #### ![AdvML](/images/color_advml.png)ML Model Stealing
 
-Machine learning models' functionality can be stolen exploiting an inference API. This constitutes [Stolen Intellectual Property](#Stolen-Intellectual-Property).
+Machine learning models' functionality can be stolen exploiting an inference API. There is a difference between Model Extraction and Model Replication: in model extraction attacks, the attacker is able to build a shadow model whose fidelity matches that of the victim model and hence, model stealing/extraction attacks lead to [Stolen Intellectual Property](#Stolen-Intellectual-Property). In Model Replication attacks, shwon above, the shadow model does not have the same fidelity as that of the victim model. 
 
 ### Initial Access
 
