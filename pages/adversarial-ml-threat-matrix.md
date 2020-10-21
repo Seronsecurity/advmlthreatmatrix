@@ -73,7 +73,7 @@ An adversary may replicate a model's functionality by training a shadow model by
 >
 > An adversary uses pre-trained weights of one model to replicate a related model's functionality. For instance, researchers wanted to replicated GPT-2, a large language model. So, the researchers used the pre-trained weights of Grover, another NLP model, and modified it using GPT-2's objective function and training data, which effectively resulted in a shadow GPT-2 model (though with lower fidelity).
 
-#### ![AdvML](/images/color_advml.png)ML Model Stealing
+#### ![AdvML](/images/color_advml.png)Model Stealing
 
 Machine learning models' functionality can be stolen exploiting an inference API. There is a difference between Model Extraction and Model Replication: in model extraction attacks, the attacker is able to build a shadow model whose fidelity matches that of the victim model and hence, model stealing/extraction attacks lead to Stolen Intellectual Property. In [Model Replication](#Model-Replication) attacks, the shadow model does not have the same fidelity as that of the victim model. 
 
@@ -153,7 +153,7 @@ All ML models exist in code, and thus vulnerable to "traditional software attack
 </details>
 
 ### Persistence
-#### ![AdvML](/images/color_advml.png)Unsafe ML Model Execution
+#### ![AdvML](/images/color_advml.png)Execute unsafe ML Model Execution
 
 An Adversary may utilize unsafe ML Models that when executed have an unintended effect. The adversary can use this technique to establish persistent access to systems. These models may be introduced via a [Pre-trained Model with Backdoor](#Pre-Trained-ML-Model-with-Backdoor). An example of this technique is to use pickle embedding to introduce malicious data payloads.
 
