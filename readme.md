@@ -15,7 +15,7 @@
     - [MITRE - Physical Adversarial Attack on Face Identification](/pages/case-studies-page.md#physical-adversarial-attack-on-face-identification)
 5. [Contributors](#contributors)
 6. [Feedback and Getting Involved](#feedback-and-getting-involved)
-    - [Join Our Mailing List](#feedback-and-getting-involved)
+    - [Join Our Mailing List](#join-our-mailing-list)
 6. [Contact Us](#contact-us)
 ---- 
 
@@ -64,13 +64,13 @@ We recommend digging into [Adversarial ML Threat Matrix](/pages/adversarial-ml-t
 
 The Adversarial ML Threat Matrix is a first-cut attempt at collating a knowledge base of how ML systems can be attacked. We need your help to make it holistic and fill in the missing gaps!
 
-**Corrections and Improvement**
+### Corrections and Improvement
 
 -   For immediate corrections, please submit a Pull Request with suggested changes! We are excited to make this system better with you!
 -   For a more hands on feedback session, we are partnering with Defcon's AI Village to open up the framework to all community members to get feedback and make it better. Current thinking is to have this workshop circa
 Jan/Feb 2021. Please register [here](https://docs.google.com/forms/d/e/1FAIpQLSdqtuE0v7qBRsGUUWDrzUEenHCdv-HNP1IiLil67dgpXtHqQw/viewform).
 
-**Contribute Case Studies**
+### Contribute Case Studies
 
 We are especially excited for new case-studies! We look forward to contributions from both industry and academic researchers. Before submitting a case-study, consider that the attack:
 1.  Exploits one or more vulnerabilities that compromises the confidentiality, integrity or availability of ML system. 
@@ -80,7 +80,7 @@ We are especially excited for new case-studies! We look forward to contributions
 You can email advmlthreatmatrix-core@googlegroups.com with summary of the incident and Adversarial ML Threat Matrix mapping.
 
 
-**Join our Mailing List**
+### Join our Mailing List
 
 - For discussions around Adversarial ML Threat Matrix, we invite everyone to join our Google Group [here](https://groups.google.com/forum/#!forum/advmlthreatmatrix/join).
 - Note: Google Groups generally defaults to your personal email. If you would rather access this forum using your corporate email (as opposed to your gmail).
