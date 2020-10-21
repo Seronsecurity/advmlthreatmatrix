@@ -44,7 +44,7 @@ Adversaries may leverage publicly available information, or Open Source Intellig
 
 #### ![AdvML](/images/color_advml.png)ML Model Discovery
 
-Adversaries may attempt to identify machine learning pipelines that exist on the system and gather information about them, including the software stack used to train and deploy models, training and testing data repositories, model repositories, and software repositories containing algorithms. This information can be used to identify targets for further collection, exfiltration, or disruption, or to tailor and improve attacks. Several of these attacks are discussed here [[1,2]](#references).
+Adversaries may attempt to identify machine learning pipelines that exist on the system and gather information about them, including the software stack used to train and deploy models, training and testing data repositories, model repositories, and software repositories containing algorithms. This information can be used to identify targets for further collection, exfiltration, or disruption, or to tailor and improve attacks. 
 
 > ##### ![AdvML](/images/color_advml.png)Reveal ML Ontology
 > By ML ML Ontology, we are referring to specific components of the ML system such as dataset (image, audio, tabular, NLP), features (handcrafted or learned), model / learning algorithm (gradient based or non-gradient based), parameters / weights. Depending on how much information is known, it can be a greybox or whitebox level of attacker knowledge. 
@@ -60,7 +60,7 @@ Adversaries may collect datasets similar to those used by a particular organizat
 
 #### ![AdvML](/images/color_advml.png)Exploit Physical Environment
 
-In addition to the attacks that take place purely in the digital domain, adversaries may also exploit the physical environment for their attacks. Recent work has show successful false positive and evasion attacks using physically printed patterns that are placed into scenes to disrupt and attack machine learning models [[3,4]](#references). MITRE has recently created a dataset based on these physically printed patterns to help researchers and practicioners better understand these attacks [[5]](#references).
+In addition to the attacks that take place purely in the digital domain, adversaries may also exploit the physical environment for their attacks. Recent work has show successful false positive and evasion attacks using physically printed patterns that are placed into scenes to disrupt and attack machine learning models. MITRE has recently created a dataset based on these [physically printed patterns](https://apricot.mitre.org/) to help researchers and practicioners better understand these attacks .
 
 #### ![AdvML](/images/color_advml.png)Model Replication
 
@@ -76,7 +76,7 @@ Stub
 
 #### ![AdvML](/images/color_advml.png)ML Model Stealing
 
-Machine learning models' functionality can be stolen exploiting an inference API. There is a difference between Model Extraction and Model Replication: in model extraction attacks, the attacker is able to build a shadow model whose fidelity matches that of the victim model and hence, model stealing/extraction attacks lead to [Stolen Intellectual Property](#Stolen-Intellectual-Property). In Model Replication attacks, shwon above, the shadow model does not have the same fidelity as that of the victim model. 
+Machine learning models' functionality can be stolen exploiting an inference API. There is a difference between Model Extraction and Model Replication: in model extraction attacks, the attacker is able to build a shadow model whose fidelity matches that of the victim model and hence, model stealing/extraction attacks lead to Stolen Intellectual Property. In Model Replication attacks, shwon above, the shadow model does not have the same fidelity as that of the victim model. 
 
 ### Initial Access
 
@@ -217,11 +217,11 @@ Adversaries may exfiltrate private information related to machine learning model
 
 > ##### ![AdvML](/images/color_advml.png)Membership Inference Attack
 >
-> The membership of a data sample in a training set may be infered by an adversary with access to an inference API.
+> The membership of a data sample in a training set may be infered by an adversary with access to an inference API. By simply querying the inference API of the victim model strategically -- and no extra access -- the adversary can cause privacy violations. 
 >
 > ##### ![AdvML](/images/color_advml.png)ML Model Inversion
 >
-> Machine learning models' training data could be reconstructed by exploiting an inference API.
+> Machine learning models' training data could be reconstructed by exploiting the confidence scores that are available via an inference API. By simply querying the inference API strategically, an adversary could back out potentially private information  embedded within the training data. This could lead to privacy violations if the attacker can reconstrcut the data of sensitive features used in the algorithm. 
 
 #### ![AdvML](/images/color_advml.png)ML Model Stealing
 
@@ -231,7 +231,7 @@ Machine learning models' functionality can be stolen exploiting an inference API
 <details> 
 <summary>Insecure Storage</summary>
 
-Adversaries may exfiltrate proprietary machine learning models or private training and testing data by exploiting insecure storage mechanisms. Adversaries may [discover](#ML-Model-Discovery), and exfiltrate components of a ML pipeline, resulting in [Stolen Intellectual Property](#Stolen-Intellectual-Property)
+Adversaries may exfiltrate proprietary machine learning models or private training and testing data by exploiting insecure storage mechanisms. Adversaries may [discover](#ML-Model-Discovery), and exfiltrate components of a ML pipeline, resulting in Stolen Intellectual Property
 
 </details>
 
