@@ -15,6 +15,7 @@
     - [MITRE - Physical Adversarial Attack on Face Identification](/pages/case-studies-page.md#physical-adversarial-attack-on-face-identification)
 5. [Contributors](#contributors)
 6. [Feedback and Getting Involved](#feedback-and-getting-involved)
+    - [Join Our Mailing List](#join-our-mailing-list)
 6. [Contact Us](#contact-us)
 ---- 
 
