@@ -225,7 +225,7 @@ Adversaries may exfiltrate private information related to machine learning model
 
 #### ![AdvML](/images/color_advml.png)ML Model Stealing
 
-Machine learning models' functionality can be stolen exploiting an inference API. This constitutes [Stolen Intellectual Property](#Stolen-Intellectual-Property).
+Machine learning models' functionality can be stolen exploiting an inference API. There is a difference between Model Extraction and Model Replication: in model extraction attacks, the attacker is able to build a shadow model whose fidelity matches that of the victim model and hence, model stealing/extraction attacks lead to [Stolen Intellectual Property](#Stolen-Intellectual-Property). In Model Replication attacks, shwon above, the shadow model does not have the same fidelity as that of the victim model. 
 
 #### ![Cyber](/images/color_cyber.png) Included ATT&CK Techniques
 <details> 
