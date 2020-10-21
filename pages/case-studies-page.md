@@ -17,7 +17,7 @@ Attacks on machine learning (ML) systems are being developed and released with i
 <img src="/images/ClearviewAI.png" alt="ClearviewAI" width="275" height="150"/>
 
 **Reported by:** 
-Mossab Hussein (@mossab_hussein)
+-   Mossab Hussein (@mossab_hussein)
 
 **Source:**
 -   https://techcrunch.com/2020/04/16/clearview-source-code-lapse/amp/
@@ -44,7 +44,7 @@ Mossab Hussein (@mossab_hussein)
 - Ellie Pavlick
 - Stefanie Tellex
 
-**Sources**
+**Source:**
 - https://www.wired.com/story/dangerous-ai-open-source/
 - https://blog.usejournal.com/opengpt-2-we-replicated-gpt-2-because-you-can-too-45e34e6d36dc
 
@@ -68,7 +68,7 @@ Mossab Hussein (@mossab_hussein)
 - Will Pearce (@moo_hax)
 - Nick Landers (@monoxgas)
 
-**Sources**
+**Source:**
 - https://nvd.nist.gov/vuln/detail/CVE-2019-20634
 - https://github.com/moohax/Talks/blob/master/slides/DerbyCon19.pdf
 - https://github.com/moohax/Proof-Pudding
@@ -76,82 +76,76 @@ Mossab Hussein (@mossab_hussein)
 ----
 
 ## Tay Poisoning 
-### Summary of Incident 
-Microsoft created Tay, a twitter chatbot for 18- to 24- year-olds in the U.S. for entertainment purposes. Within 24 hours of its deployment, Tay had to be decommissioned because it tweeted reprehrensible words.
 
-### Adversarial Threat Matrix Mapping
-1. Tay bot used the interactions with its twitter users as training data to improve its conversations.
-2. Average users of Twitter coordinated together with the intent of defacing Tay bot by exploiting this feedback loop
+ **Summary of Incident:** Microsoft created Tay, a twitter chatbot for 18- to 24- year-olds in the U.S. for entertainment purposes. Within 24 hours of its deployment, Tay had to be decommissioned because it tweeted reprehrensible words.
+ 
+**Mapping to Adversarial Threat Matrix :**
+-   Tay bot used the interactions with its twitter users as training data to improve its conversations.
+-   Average users of Twitter coordinated together with the intent of defacing Tay bot by exploiting this feedback loop
+-   As a result of this coordinated attack, Tay's training data was poisoned which led its conversation algorithms to generate more reprehensible material
 
 <img src="/images/Tay.png" alt="Tay_Poisoning" width="350" height="150"/>
 
-### Impact
-As a result of this coordinated attack, Tay's training data was poisoned which led its conversation algorithms to generate more reprehensible material.
 
-### Sources
-- [Learning From Tays Introduction](https://blogs.microsoft.com/blog/2016/03/25/learning-tays-introduction/) 
-- [In 2016, Microsoft’s Racist Chatbot Revealed the Dangers of Online Conversation](https://spectrum.ieee.org/tech-talk/artificial-intelligence/machine-learning/in-2016-microsofts-racist-chatbot-revealed-the-dangers-of-online-conversation)
+**Source:**
+- https://blogs.microsoft.com/blog/2016/03/25/learning-tays-introduction/
+- https://spectrum.ieee.org/tech-talk/artificial-intelligence/machine-learning/in-2016-microsofts-racist-chatbot-revealed-the-dangers-of-online-conversation
 
 ----
 
 ## Microsoft - Azure Service 
-### Summary of Incident
-The Azure Red Team and Azure Trustworthy ML team performed a red team exercise on an internal Azure service with the intention of disrupting its service
+**Summary of Incident:** : The Azure Red Team and Azure Trustworthy ML team performed a red team exercise on an internal Azure service with the intention of disrupting its service
 
-### Adversarial Threat Matrix Mapping
-1. The team first performed reconnaissance to gather information about the target ML model
-2. Then, using a valid account the team found the model file of the target ML model and the necessary training data
-3. Using this, the red team performed an offline evasion attack by methodically searching for adversarial examples
-4. Via an exposed API interface, the team performed an online evasion attack by replaying the adversarial examples, which helped achieve this goal.
+**Reported by:** Microsoft 
+**Mapping to Adversarial Threat Matrix :**
+-   The team first performed reconnaissance to gather information about the target ML model
+-   Then, using a valid account the team found the model file of the target ML model and the necessary training data
+-   Using this, the red team performed an offline evasion attack by methodically searching for adversarial examples
+-   Via an exposed API interface, the team performed an online evasion attack by replaying the adversarial examples, which helped achieve this goal.
+-   This operation had a combination of traditional ATT&CK enterprise techniques such as finding Valid account, and Executing code via an API -- all interleaved with adversarial ML specific steps such as offline and online evasion examples.
 
 <img src="/images/Msft1.PNG" alt="MS_Azure" width="1025" height="185"/>
 
-### Impact
-This operation had a combination of traditional ATT&CK enterprise techniques such as finding Valid account, and Executing code via an API -- all interleaved with adversarial ML specific steps such as offline and online evasion examples.
+**Reported by:**
+- Microsoft (Azure Trustworthy Machine Learning)
 
-### Reported by 
-- Azure Trustworthy Machine Learning 
-
-### Sources
+**Sources:**
 - None
 
 ----
 
 ## Bosch - EdgeAI 
-### Summary of Incident
-Bosch team performed a research exercise on an internal edge AI system with a dual intention to extract the model and craft adversarial example to evade
+**Summary of Incident:** : Bosch team performed a research exercise on an internal edge AI system with a dual intention to extract the model and craft adversarial example to evade
 
-### Adversarial Threat Matrix Mapping
-1. The team first performed reconnaissance to gather information about the edge AI system device working with sensor interface
-2. Then, using a trust relationship between sensor and edge ai system, the team fed synthetic data on sensor to extract the model
-3. Using this, the team performed an offline evasion attack by crafting adversarial example with help of extracted model
-4. Via an exposed sensor interface, the team performed an online evasion attack by replaying the adversarial examples, which helped achieve this goal.
-5. The team was also able to reconstruct the edge ai system with extracted model
-![alt](/images/Bosch1.PNG)
-### Impact
-This operation had a combination of traditional ATT&CK industrial control system techniques such as supply chain compromise via sensor, and Executing code via sensor interface. ll interleaved with adversarial ML specific steps such as, offline and online evasion examples.
+**Mapping to Adversarial Threat Matrix:**
+-   The team first performed reconnaissance to gather information about the edge AI system device working with sensor interface
+-   Then, using a trusted relationship mechanism between sensor and edge ai system team fed synthetic data on sensor to extract the model
+-   Using this, the team performed an offline evasion attack by crafting adversarial example with help of extracted model
+-   Via an exposed sensor interface, the team performed an online evasion attack by replaying the adversarial examples, which helped achieve this goal.
+-   This operation had a combination of traditional ATT&CK industrial control system techniques such as supply chain compromise via sensor, and Executing code via sensor interface. all interleaved with adversarial ML specific steps such as,
+  - offline and online evasion examples.
+- The team was also able to reconstruct the edge ai system with extracted model
 
-### Reported by 
+**Reported by:** 
 - Manoj Parmar (@mparmar47)
 
-### Sources
+**Source:**
 - None
 
 ----
 
 ## Microsoft – EdgeAI 
-### Summary of Incident
-The Azure Red Team performed a red team exercise on a new Microsoft product designed for running AI workloads at the Edge.  
+**Summary of Incident:** The Azure Red Team performed a red team exercise on a new Microsoft product designed for running AI workloads at the Edge.  
 
-### Adversarial Threat Matrix Mapping
+**Mapping to Adversarial Threat Matrix:**  
 -   The team first performed reconnaissance to gather information about the target ML model
 -   The team first performed reconnaissance to gather information about the target ML model
 -   Then, used a publicly available version of the ML model, started sending queries and analyzing the responses (inferences) from the ML model. 
 -   Using this, the red team created an automated system that continuously manipulated an original target image, that tricked the ML model into producing incorrect inferences, but the perturbations in the image were unnoticeable to the human eye. 
 -   Feeding this perturbed image, the red team was able to evade the ML model into misclassifying the input image. 
+-   This operation had one step in the traditional ATTACK MITRE technique to do reconnaissance on the ML model being used in the product, and then the rest of the techniques was to use Offline evasion, followed by online evasion of the targeted product. 
 
 ![alt_text](/images/msft2.png)
-
 
 **Reported by:**
 Microsoft  
@@ -187,4 +181,4 @@ We are especially excited for new case-studies! We look forward to contributions
 2.  The attack was against a *production, commercial* ML system. This can be on MLaaS like Amazon, Microsoft Azure, Google Cloud AI, IBM Watson etc or ML systems embedded in client/edge. 
 3.  You have permission to share the information/published this research. Please follow the proper channels before reporting a new attack and make sure you are practicing responsible disclosure.
 
-You can email advmlthreatmatrix-core@googlegroups.com with summary of the incident and Adversarial ML Threat Matrix mapping.
+You can email advmlthreatmatrix-core@googlegroups.com with summary of the incident, Adversarial ML Threat Matrix mapping and associated resources. 
