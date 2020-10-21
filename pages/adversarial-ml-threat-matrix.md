@@ -68,7 +68,7 @@ Stub
 
 > ##### ![AdvML](/images/color_advml.png)Exploit API - Shadow Model 
 >
-> An adversary may replicate a machine learning model's functionality by exploiting its inference API. In this case of model replication, the attacker repeatedly queries the victim's inference API and uses it as an oracle to collect combination of data and label. From the combination of (data,label), the attacker builds a shadown model, that effectively functions as the victim model -- but with lower fidelity. This is generally the 
+> An adversary may replicate a machine learning model's functionality by exploiting its inference API. In this case of model replication, the attacker repeatedly queries the victim's inference API and uses it as an oracle to collect combination of data and label. From the combination of (data,label), the attacker builds a shadown model, that effectively functions as the victim model -- but with lower fidelity. This is generally the first step in model evasion. 
 >
 > ##### ![AdvML](/images/color_advml.png)Pre-Trained Weights
 >
@@ -134,11 +134,11 @@ An Adversary may utilize unsafe ML Models that when executed have an unintended 
 
 > ##### ![AdvML](/images/color_advml.png)ML Models from Compromised Sources
 >
-> An adversary may introduce an unsafe model from a compromised source.
+> TIn Model Zoo such as "Caffe Model Zoo" or "ONNX Model Zoo" a collection of state of the art ML, pre-trained ML models are available so that ML engineers do not have to spend resources training ML models from scratch (hence "pre-trained"). An adversary may be able to compromise the model by checking in malicious code into the repository or perform a Man-in-the-Middle attack as the models are downloaded.  
 >
 > ##### ![AdvML](/images/color_advml.png)Pickle Embedding
 >
-> An adversary may use pickle embedding to introduce malicious data payloads.
+> Python is one of the most commonly used ML language. Python pickles are used in serializing and de-serializing a Python object structurs. ML models are sometimes stored as pickles and shared. An adversary may use pickle embedding to introduce malicious data payloads which may result in remote code execution.
 
 ### ![Cyber](/images/color_cyber.png) Included ATT&CK Techniques
 <details>
