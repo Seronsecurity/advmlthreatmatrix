@@ -142,12 +142,14 @@ An Adversary may utilize unsafe ML Models that when executed have an unintended 
 ### ![Cyber](/images/color_cyber.png) Included ATT&CK Techniques
 <details>
 <summary>Execution via API</summary>
-stub
+For most Machine Learning as a Service (MLaaS), the primary interaction point is via an API. So, attackers interact with the API in three ways: To build an offline copy of the model through Model Stealing or Model Replication; or to do online attacks like Model Inversion, Online Evasion, Membership inference. Execution via API is also possible for causative attacks if the adversary can taint the training data of the model via feedback loop, 
 </details>
 
 <details>
 <summary>Traditional Software Attacks</summary>
-Stubs
+All ML models exist in code, and thus vulnerable to "traditional software attacks" if the underlying system is not secured appropriately. For instance, [researchers](https://arxiv.org/abs/1711.11008) found that a number of popular ML dev packages like Tensorflow, Caffe, OpenCV had open CVEs against them, making them vulnerable to traditional heap overflow and buffer overflow attacks. 
+   
+   
 </details>
 
 ### Persistence
@@ -238,17 +240,11 @@ Adversaries may exfiltrate proprietary machine learning models or private traini
 
 #### ![AdvML](/images/color_advml.png)Defacement
 
-Adversaries can create data inputs that prevent a machine learning model from positively identifying the data sample. This technique can be used to evade detection on the network, or to evade a downstream task where machine learning is utilized.
-
-Example evasion attacks include Simple Transformation, Common Corruption, Adversarial Examples, Happy String.
-
-Exploit Open CVEs in Package
+Adversaries can create data inputs that can be used to subvert the system for fun. This can be acheived corrupting the training data via poisoning as in the case of defacement of [Tay Bot](/pages/case-studies-page.md#tay-poisoning), Evasion or exploiting open CVEs in ML dev packages. 
 
 #### ![AdvML](/images/color_advml.png)Denial of Service
 
-Adversaries may target different Machine Learning services to conduct a DoS.
-
-One example of this type of attack is Sponge attack.
+Adversaries may target different Machine Learning services to conduct a DoS. One example of this type of attack is [Sponge examples](https://arxiv.org/abs/2006.03463) that could cause DoS on production NLP systems by wasting its energy consumption. 
 
 #### ![Cyber](/images/color_cyber.png) Included ATT&CK Techniques
 <details>
@@ -270,7 +266,9 @@ To maximize impact on the target organization, malware designed for encrypting d
 
 <summary>Stop System Shutdown/Reboot</summary>
 
-Stub
+Adversaries may shutdown/reboot systems to interrupt access to, or aid in the destruction of, those systems. Operating systems may contain commands to initiate a shutdown/reboot of a machine. In some cases, these commands may also be used to initiate a shutdown/reboot of a remote computer. Shutting down or rebooting systems may disrupt access to computer resources for legitimate users.
+
+Adversaries may attempt to shutdown/reboot a system after impacting it in other ways, such as [Disk Structure Wipe](https://attack.mitre.org/techniques/T1561/002/) or [Inhibit System Recovery] (https://attack.mitre.org/techniques/T1561/002/), to hasten the intended effects on system availability.
 
 </details>
 
