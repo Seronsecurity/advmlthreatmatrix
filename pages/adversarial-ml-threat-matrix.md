@@ -173,17 +173,17 @@ A tool has been developed to facilitate planting backdoors in cloud container im
 
 #### ![AdvML](/images/color_advml.png)Evasion Attack
 
-Adversaries can create data inputs that prevent a machine learning model from positively identifying the data sample. This technique can be used to evade detection on the network, or to evade a downstream task where machine learning is utilized.
+Unlike poisoning attacks that needs access to training data, adversaries can fool an ML classifier by simply corrupting the query to the ML model. More broadly, the adversary can create data inputs that prevent a machine learning model from positively identifying the data sample. This technique can be used toevade an ML model to correctly classify it in the downstream task. 
 
-Example evasion attacks include Simple Transformation, Common Corruption, Adversarial Examples, Happy String
 
 > ##### ![AdvML](/images/color_advml.png)Offline Evasion
->
-> Simple Transformation, Common Corruption, Adversarial Examples, Happy Strings
+> In this case, the attacker has an offline copy of the ML model that was obtained via Model Replication or Model Extraction - depending on the case, the offline copy may be a shadow copy or a faithful reconstruction of the original model. While the goal of the adversary is to evade an online model, having access to an Offline model provides a space for the attacker to evade ML model without the fear of tripwires. Once the sample that evades the ML model is found, the attacker can essentially replay the sample to the victim, online model and be successful in the operation. 
+
+Now this asks the question - how can an an adversary find the sample algorithmically that evades the offline ML model? There are many strategies at play, and depending on the economics, the attacker may choose one from the following: Simple Transformation of the input (cropping, shearing, translation), Common Corruption (adding white noise in the background), Adversarial Examples (carefully perturbing the input to achieve desired output) and Happy String (wherein the benign input is tacked onto malicious query points) 
 >
 > ##### ![AdvML](/images/color_advml.png)Online Evasion
 >
-> Simple Transformation, Common Corruption, Adversarial Examples, Happy Strings
+> The same sub techniques like Simple Transformation, Common Corruption, Adversarial Examples, Happy Strings work also in the context of Online evasion attacks. The distinction between Offline and Online is if the model under attack is either stolen/replicated or if it is the live ML model. 
 
 #### ![AdvML](/images/color_advml.png)Model Poisoning
 
