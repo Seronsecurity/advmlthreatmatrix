@@ -195,19 +195,19 @@ Adversaries may attempt to poison datasets used by a ML system by modifying the 
 
 > ###### ![AdvML](/images/color_advml.png)Tainting Data from Acquisition - Label Corruption
 >
-> Adversaries may attempt to alter labels in a training set. This would cause a model to misclassify an input
+> Adversaries may attempt to alter labels in a training set causing the model to misclassify.  
 >
 > ###### ![AdvML](/images/color_advml.png)Tainting Data from Open Source Supply Chains
 >
-> Adversaries may attempt to add their own data to an open source dataset which could create a classfication backdoor.
+> Adversaries may attempt to add their own data to an open source dataset which could create a classfication backdoor.  For instance, the adversary could cause a targetted misclassification attack only when certain triggers are present in the query; and perform well otherwise. 
 >
 > ###### ![AdvML](/images/color_advml.png)Tainting Data from Acquisition - Chaff Data
 >
-> Adding noise to a dataset would lower the accuracy of the model, potentially making the model more vulnerable to misclassifications
+> Adding noise to a dataset would lower the accuracy of the model, potentially making the model more vulnerable to misclassifications. For instance, researchers showed how they can overwhelm Splunk (and hence the ML models feedding from it), by simply adding potentially corrupted data. See [Attacking SIEM with Fake Logs](https://letsdefend.io/blog/attacking-siem-with-fake-logs/)
 >
 > ###### ![AdvML](/images/color_advml.png)Tainting Data in Training - Label Corruption
 >
-> Changing training labels could create a backdoor in the model, such that a malicious input would always be classified to the benefit of the adversary
+> Changing training labels could create a backdoor in the model, such that a malicious input would always be classified to the benefit of the adversary. For instance, the adversary could cause a targetted misclassification attack only when certain triggers are present in the query; and perform well otherwise. 
 
 ### Exfiltration
 
