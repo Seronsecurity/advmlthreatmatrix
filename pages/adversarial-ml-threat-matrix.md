@@ -60,11 +60,11 @@ Adversaries may collect datasets similar to those used by a particular organizat
 
 #### ![AdvML](/images/color_advml.png)Exploit Physical Environment
 
-In addition to the attacks that take place purely in the digital domain, adversaries may also exploit the physical environment for their attacks. Recent work has show successful false positive and evasion attacks using physically printed patterns that are placed into scenes to disrupt and attack machine learning models. MITRE has recently created a dataset based on these [physically printed patterns](https://apricot.mitre.org/) to help researchers and practitioners better understand these attacks .
+In addition to the attacks that take place purely in the digital domain, adversaries may also exploit the physical environment for their attacks. Recent work has show successful false positive and evasion attacks using physically printed patterns that are placed into scenes to disrupt and attack machine learning models. MITRE has recently created a dataset based on these [physically printed patterns](https://apricot.mitre.org/) to help researchers and practitioners better understand these attacks.
 
 #### ![AdvML](/images/color_advml.png)Model Replication
 
-Stub
+An adversary may replicate a model's functionality by training a shadow model by exploiting its API, or by leveraging pre-trained weights.
 
 > ##### ![AdvML](/images/color_advml.png)Exploit API - Shadow Model 
 >
@@ -76,7 +76,7 @@ Stub
 
 #### ![AdvML](/images/color_advml.png)ML Model Stealing
 
-Machine learning models' functionality can be stolen exploiting an inference API. There is a difference between Model Extraction and Model Replication: in model extraction attacks, the attacker is able to build a shadow model whose fidelity matches that of the victim model and hence, model stealing/extraction attacks lead to Stolen Intellectual Property. In Model Replication attacks, shown above, the shadow model does not have the same fidelity as that of the victim model. 
+Machine learning models' functionality can be stolen exploiting an inference API. There is a difference between Model Extraction and Model Replication: in model extraction attacks, the attacker is able to build a shadow model whose fidelity matches that of the victim model and hence, model stealing/extraction attacks lead to Stolen Intellectual Property. In [Model Replication](#Model-Replication) attacks, the shadow model does not have the same fidelity as that of the victim model. 
 
 ### Initial Access
 
