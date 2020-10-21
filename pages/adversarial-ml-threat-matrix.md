@@ -56,7 +56,7 @@ Adversaries may attempt to identify machine learning pipelines that exist on the
 
 #### ![AdvML](/images/color_advml.png)Gathering Datasets
 
-Adversaries may collect datasets similar to those used by a particular organization or in a specific approach. Datasets may be identified when [Acquiring OSINT Information](#Acquire-OSINT-Information). This may allow the adversary to replicate a private model's functionality, constituting [Intellectual Property Theft](#Stolen-Intellectual-Property), or enable the adversary to carry out other attacks such as an [Evasion Attack](#Evasion-Attack).
+Adversaries may collect datasets similar to those used by a particular organization or in a specific approach. Datasets may be identified when [Acquiring OSINT Information](#Acquire-OSINT-Information). This may allow the adversary to replicate a private model's functionality, constituting Intellectual Property Theft, or enable the adversary to carry out other attacks such as an [Evasion Attack](#Evasion-Attack).
 
 #### ![AdvML](/images/color_advml.png)Exploit Physical Environment
 
