@@ -69,7 +69,7 @@ An adversary may replicate a model's functionality by training a shadow model by
 >
 > An adversary may replicate a machine learning model's functionality by exploiting its inference API. In this case of model replication, the attacker repeatedly queries the victim's inference API and uses it as an oracle to collect combination of data and label. From the combination of (data,label), the attacker builds a shadow model, that effectively functions as the victim model -- but with lower fidelity. This is generally the first step in model evasion. 
 >
-> ##### ![AdvML](/images/color_advml.png)Pre-Trained Weights
+> ##### ![AdvML](/images/color_advml.png)Alter Publicly Available, Pre-Trained Weights
 >
 > An adversary uses pre-trained weights of one model to replicate a related model's functionality. For instance, researchers wanted to replicated GPT-2, a large language model. So, the researchers used the pre-trained weights of Grover, another NLP model, and modified it using GPT-2's objective function and training data, which effectively resulted in a shadow GPT-2 model (though with lower fidelity).
 
