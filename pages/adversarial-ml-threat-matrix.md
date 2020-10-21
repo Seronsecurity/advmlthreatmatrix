@@ -169,7 +169,7 @@ Adversaries may implant cloud container images with malicious code to establish 
 A tool has been developed to facilitate planting backdoors in cloud container images.(Citation: Rhino Labs Cloud Backdoor September 2019) If an attacker has access to a compromised AWS instance, and permissions to list the available container images, they may implant a backdoor such as a [Web Shell](https://attack.mitre.org/techniques/T1505/003).(Citation: Rhino Labs Cloud Image Backdoor Technique Sept 2019) Adversaries may also implant Docker images that may be inadvertently used in cloud deployments, which has been reported in some instances of cryptomining botnets.(Citation: ATT Cybersecurity Cryptocurrency Attacks on Cloud)
 </details>
 
-### Defense Evasion
+### Evasion
 
 #### ![AdvML](/images/color_advml.png)Evasion Attack
 
@@ -179,7 +179,7 @@ Unlike poisoning attacks that needs access to training data, adversaries can foo
 > ##### ![AdvML](/images/color_advml.png)Offline Evasion
 > In this case, the attacker has an offline copy of the ML model that was obtained via Model Replication or Model Extraction - depending on the case, the offline copy may be a shadow copy or a faithful reconstruction of the original model. While the goal of the adversary is to evade an online model, having access to an Offline model provides a space for the attacker to evade ML model without the fear of tripwires. Once the sample that evades the ML model is found, the attacker can essentially replay the sample to the victim, online model and be successful in the operation. 
 
-Now this asks the question - how can an an adversary find the sample algorithmically that evades the offline ML model? There are many strategies at play, and depending on the economics, the attacker may choose one from the following: Simple Transformation of the input (cropping, shearing, translation), Common Corruption (adding white noise in the background), Adversarial Examples (carefully perturbing the input to achieve desired output) and Happy String (wherein the benign input is tacked onto malicious query points) 
+> Now this asks the question - how can an an adversary find the sample algorithmically that evades the offline ML model? There are many strategies at play, and depending on the economics, the attacker may choose one from the following: Simple Transformation of the input (cropping, shearing, translation), Common Corruption (adding white noise in the background), Adversarial Examples (carefully perturbing the input to achieve desired output) and Happy String (wherein the benign input is tacked onto malicious query points) 
 >
 > ##### ![AdvML](/images/color_advml.png)Online Evasion
 >
