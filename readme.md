@@ -11,9 +11,9 @@
 The goal of this project is to position attacks on machine learning (ML) systems in an [ATT&CK](https://attack.mitre.org/)-style framework so that security analysts can orient themselves
 to these new and upcoming threats.
 
-If you are new to how ML systems can be attacked, we suggest starting at this no-frills [Adversarial ML 101](/pages/adversarial-ml-101.md) aimed at security analysts. 
+If you are new to how ML systems can be attacked, we suggest starting at this no-frills [Adversarial ML 101](/pages/adversarial-ml-101.md#adversarial-machine-learning-101) aimed at security analysts. 
 
-Or if you want to dive right in, head to [Adversarial ML Threat Matrix](/pages/adversarial-ml-threat-matrix.md).
+Or if you want to dive right in, head to [Adversarial ML Threat Matrix](/pages/adversarial-ml-threat-matrix.md#adversarial-ml-threat-matrix).
 
 ## Why Develop an Adversarial ML Threat Matrix? 
 -   In the last three years, major companies such as [Google](https://www.zdnet.com/article/googles-best-image-recognition-system-flummoxed-by-fakes/), [Amazon](https://www.fastcompany.com/90240975/alexa-can-be-hacked-by-chirping-birds), [Microsoft](https://www.theguardian.com/technology/2016/mar/24/tay-microsofts-ai-chatbot-gets-a-crash-course-in-racism-from-twitter), and [Tesla](https://spectrum.ieee.org/cars-that-think/transportation/self-driving/three-small-stickers-on-road-can-steer-tesla-autopilot-into-oncoming-lane), have had their ML systems tricked, evaded, or misled.
@@ -24,7 +24,7 @@ Unlike traditional cybersecurity vulnerabilities that are tied to specific softw
 
 This threat matrix came out of partnership with 12 industry and academic research groups with the goal of empowering security analysts to orient themselves to these new and upcoming threats. **The framework is seeded with a curated set of vulnerabilities and adversary behaviors that Microsoft and MITRE have vetted to be effective against production ML systems**. We used ATT&CK as a template since security analysts are already familiar with using this type of matrix. 
 
-We recommend digging into [Adversarial ML Threat Matrix](/pages/adversarial-ml-threat-matrix.md). 
+We recommend digging into [Adversarial ML Threat Matrix](/pages/adversarial-ml-threat-matrix.md#adversarial-ml-threat-matrix). 
 
 To see the Matrix in action, we recommend seeing the curated case studies
 
