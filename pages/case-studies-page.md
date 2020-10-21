@@ -115,7 +115,7 @@ GPT-2's objective function.
 
 ----
 
-## Bosch - EdgeAI 
+## Bosch - EdgeAI
 **Summary of Incident:** : Bosch team performed a research exercise on an internal edge AI system with a dual intention to extract the model and craft adversarial examples to evade.
 
 **Mapping to Adversarial Threat Matrix:**
@@ -137,7 +137,7 @@ GPT-2's objective function.
 
 ----
 
-## Microsoft - EdgeAI 
+## Microsoft - EdgeAI
 **Summary of Incident:** The Azure Red Team performed a red team exercise on a new Microsoft product designed for running AI workloads at the Edge.  
 
 **Mapping to Adversarial Threat Matrix:**  
