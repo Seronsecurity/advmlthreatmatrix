@@ -47,12 +47,12 @@ Adversaries may leverage publicly available information, or Open Source Intellig
 Adversaries may attempt to identify machine learning pipelines that exist on the system and gather information about them, including the software stack used to train and deploy models, training and testing data repositories, model repositories, and software repositories containing algorithms. This information can be used to identify targets for further collection, exfiltration, or disruption, or to tailor and improve attacks. Several of these attacks are discussed here [[1,2]](#references).
 
 > ##### ![AdvML](/images/color_advml.png)Reveal ML Ontology
->
-> stub
+> By ML ML Ontology, we are referring to specific components of the ML system such as dataset (image, audio, tabular, NLP), features (handcrafted or learned), model / learning algorithm (gradient based or non-gradient based), parameters / weights. Depending on how much information is known, it can be a greybox or whitebox level of attacker knowledge. 
+> 
 >
 > ##### ![AdvML](/images/color_advml.png)Reveal ML Model Family
->
-> One exploratory attack that adversaries may use is model inversion, which allows the attacker to reveal the underlying ML model and/or model family [[1]](#references).
+> Here the specifics of ML Models are not known and can generally be thought of as blackbox attacks. The attacker is able to only glean the model task, model input and model output. But because of the nature of the blog posts or papers that are published, some metion of the algorithms are inevitable. 
+
 
 #### ![AdvML](/images/color_advml.png)Gathering Datasets
 
@@ -277,13 +277,6 @@ To maximize impact on the target organization, malware designed for encrypting d
 Stub
 
 </details>
-
-### References
-[[1](https://arxiv.org/pdf/1810.00069.pdf)] Chakraborty, Anirban, et al. "Adversarial attacks and defences: A survey." arXiv preprint arXiv:1810.00069 (2018).  
-[[2](https://nvlpubs.nist.gov/nistpubs/ir/2019/NIST.IR.8269-draft.pdf)] Tabassi, Elham, et al. "A Taxonomy and Terminology of Adversarial Machine Learning." (2019).  
-[[3](https://s3.observador.pt/wp-content/uploads/2017/08/08133934/1707-08945.pdf)] Evtimov, Ivan, et al. "Robust physical-world attacks on machine learning models." arXiv preprint arXiv:1707.08945 2.3 (2017): 4.  
-[[4](https://arxiv.org/pdf/1910.11099.pdf)] Xu, Kaidi, et al. "Adversarial T-shirt! evading person detectors in a physical world." In Proceedings of the European Conference on Computer Vision, 2020.  
-[[5](https://arxiv.org/pdf/1912.08166.pdf)] Braunegg, A., et al. "APRICOT: A Dataset of Physical Adversarial Attacks on Object Detection." In Proceedings of the European Conference on Computer Vision, 2020.
 
 # Next Recommended Reading
 See how the matrix can be used via [Case Studies Page](/pages/case-studies-page.md)
