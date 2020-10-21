@@ -1,6 +1,5 @@
 # Adversarial ML Threat Matrix
 
-
 ## Things to keep in mind before you use the framework:
 1.  This is a **first cut attempt** at collating known adversary techniques against ML Systems. We plan to iterate on the framework based on feedback from the security     and adversarial machine learning community (please engage with us and help make the matrix better!). Net-Net: This is a *living document* that will be routinely updated.
    -  Have feedback or improvements? We want it! See [Feedback](/readme.md#feedback-and-getting-involved).
@@ -236,9 +235,6 @@ Adversaries may exfiltrate proprietary machine learning models or private traini
 </details>
 
 ### Impact
-#### ![AdvML](/images/color_advml.png)ML Model Integrity Attacks
-
-Adversaries may attack the integrity of machine learning models by crafting adversarial examples that appear to be normal inputs, but cause the model to make errors at inference time. These attacks can reduce prediction confidence and cause false positives or false negatives, eroding confidence in the system over time.
 
 #### ![AdvML](/images/color_advml.png)Defacement
 
