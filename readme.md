@@ -92,7 +92,6 @@ You can email advmlthreatmatrix-core@googlegroups.com with summary of the incide
 For corrections and improvement or to contribute a case study, see [Feedback](#feedback-and-getting-involved)
 
 
--  For general questions/comments/discussion, our public email group is advmlthreatmatrix@googlegroups.com. This emails all the members of the distribution group. 
--  To contact the Adversarial ML Leadership team, email advmlthreatmatrix-core@googlegroups.com
--  For private questions/comments/discussions and how organizations can get involved in the effort, please email: <Ram.Shankar@microsoft.com> and <Mikel@mitre.org>
+-  For general questions/comments/discussion, our public email group is advmlthreatmatrix@googlegroups.com. This emails all the members of the distribution group. For specific questions regarding contributing new case studies, email advmlthreatmatrix-core@googlegroups.com. This emails all the core contributors. 
+-  For private comments/discussions and how organizations can get involved in the effort, please email: <Ram.Shankar@microsoft.com> and <Mikel@mitre.org>
 
