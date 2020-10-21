@@ -35,7 +35,7 @@ Unlike traditional cybersecurity vulnerabilities that are tied to specific softw
 
 This threat matrix came out of partnership with 12 industry and academic research groups with the goal of empowering security analysts to orient themselves to these new and upcoming threats. **The framework is seeded with a curated set of vulnerabilities and adversary behaviors that Microsoft and MITRE have vetted to be effective against production ML systems.** We used ATT&CK as a template since security analysts are already familiar with using this type of matrix.
 
-We recommend digging into [Adversarial ML Threat Matrix](/pages/adversarial-ml-threat-matrix.md) next
+We recommend digging into [Adversarial ML Threat Matrix](/pages/adversarial-ml-threat-matrix.md) next. 
 
 
 
