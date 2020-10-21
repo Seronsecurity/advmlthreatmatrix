@@ -51,6 +51,7 @@ We recommend digging into [Adversarial ML Threat Matrix](/pages/adversarial-ml-t
 | IBM                 | Pin-Yu Chen       |
 | NVIDIA              | David Reber Jr., Keith Kozo, Christopher Cottrell, Daniel Rohrer |
 | Airbus              | Adam Wedgbury     |
+|PricewaterhouseCoopers |Michael Montecillo|
 | Deep Instinct       | Nadav Maman       |
 | Two Six Labs        | David Slater      |
 | University of Toronto | Adelin Travers, Jonas Guan, Nicolas Papernot |
