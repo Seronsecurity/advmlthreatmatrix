@@ -3,9 +3,9 @@
 
 ## Things to keep in mind before you use the framework:
 1.  This is a **first cut attempt** at collating known adversary techniques against ML Systems. We plan to iterate on the framework based on feedback from the security     and adversarial machine learning community (please engage with us and help make the matrix better!). Net-Net: This is a *living document* that will be routinely updated.
-   -  Have feedback or improvements? We want in! See [Feedback](/pages/readme.md#feedback-and-getting-involved)
-2.  Only known bad is listed in the Matrix. Adversarial ML is an active area of research with new classes constantly being discovered. If you find a technique that is     not listed, please enlist it in the framework (see section on Feedback)
-3.  We are not prescribing definitive defenses at this point since the field has not reached consenus. We are already in conversations with industry members to add best practices in future revisions such as adversarial training for adversarial examples, restricting the number of significant digits in confidence score for model stealing.
+   -  Have feedback or improvements? We want it! See [Feedback](/pages/readme.md#feedback-and-getting-involved).
+2.  Only known bad is listed in the Matrix. Adversarial ML is an active area of research with new classes constantly being discovered. If you find a technique that is     not listed, please enlist it in the framework (see section on [Feedback](/pages/readme.md#feedback-and-getting-involved)).
+3.  We are not prescribing definitive defenses at this point since the field has not reached consensus. We are already in conversations with industry members to add best practices in future revisions such as adversarial training for adversarial examples, restricting the number of significant digits in confidence score for model stealing.
 4.  This is not a risk prioritization framework - The Threat Matrix only collates the known techniques; it does not provide a means to prioritize the risks.
 
 ## Structure of Adversarial ML Threat Matrix
@@ -15,7 +15,7 @@ However, there are two main differences:
 
 1.  ATT&CK Enterprise is generally designed for corporate network which is composed of many sub components like workstation, bastion hosts, database, network gear,         active directory, cloud component and so on. The tactics of ATT&CK enterprise (initial access, persistence, etc) are really a short hand of saying initial access       to *corporate network;* persistence *in corporate network.* In Adversarial ML Threat Matrix, we acknowledge that ML systems are part of corporate network but           wanted to highlight the uniqueness of the attacks.
 
-    **Difference:** In the Adversarial ML Threat Matrix, the "Tactics" should be read as "reconnaissance of ML subsystem", "persistence in ML subsystem", "evading the      ML subsystem"
+    **Difference:** In the Adversarial ML Threat Matrix, the "Tactics" should be read as "reconnaissance of ML subsystem", "persistence in ML subsystem", "evading the      ML subsystem".
 
 2.  When we analyzed real-world attacks on ML systems, we found out that attackers can pursue different strategies: Rely on traditional cybersecurity technique only;       Rely on Adversarial ML techniques only; or Employ a combination of traditional cybersecurity techniques and ML techniques.
 
@@ -51,16 +51,16 @@ Adversaries may attempt to identify machine learning pipelines that exist on the
 > 
 >
 > ##### ![AdvML](/images/color_advml.png)Reveal ML Model Family
-> Here the specifics of ML Models are not known and can generally be thought of as blackbox attacks. The attacker is able to only glean the model task, model input and model output. But because of the nature of the blog posts or papers that are published, some metion of the algorithms such as "Deep Learning" may squarely indicate that the underlying algorithm is gradient based.  
+> Here the specifics of ML Models are not known and can generally be thought of as blackbox attacks. The attacker is able to only glean the model task, model input and model output. But because of the nature of the blog posts or papers that are published, some mention of the algorithms such as "Deep Learning" may squarely indicate that the underlying algorithm is gradient based.  
 
 
 #### ![AdvML](/images/color_advml.png)Gathering Datasets
 
-Adversaries may collect datasets similar to those used by a particular organization or in a specific approach. Datasets may be identified when [Acquiring OSINT Information](#Acquire-OSINT-Information). This may allow the adversary to replicate a private model's funcionality, constituting [Intellectual Property Theft](#Stolen-Intellectual-Property), or enable the adversary to carry out other attacks such as an [Evasion Attack](#Evasion-Attack).
+Adversaries may collect datasets similar to those used by a particular organization or in a specific approach. Datasets may be identified when [Acquiring OSINT Information](#Acquire-OSINT-Information). This may allow the adversary to replicate a private model's functionality, constituting [Intellectual Property Theft](#Stolen-Intellectual-Property), or enable the adversary to carry out other attacks such as an [Evasion Attack](#Evasion-Attack).
 
 #### ![AdvML](/images/color_advml.png)Exploit Physical Environment
 
-In addition to the attacks that take place purely in the digital domain, adversaries may also exploit the physical environment for their attacks. Recent work has show successful false positive and evasion attacks using physically printed patterns that are placed into scenes to disrupt and attack machine learning models. MITRE has recently created a dataset based on these [physically printed patterns](https://apricot.mitre.org/) to help researchers and practicioners better understand these attacks .
+In addition to the attacks that take place purely in the digital domain, adversaries may also exploit the physical environment for their attacks. Recent work has show successful false positive and evasion attacks using physically printed patterns that are placed into scenes to disrupt and attack machine learning models. MITRE has recently created a dataset based on these [physically printed patterns](https://apricot.mitre.org/) to help researchers and practitioners better understand these attacks .
 
 #### ![AdvML](/images/color_advml.png)Model Replication
 
@@ -68,15 +68,15 @@ Stub
 
 > ##### ![AdvML](/images/color_advml.png)Exploit API - Shadow Model 
 >
-> An adversary may replicate a machine learning model's functionality by exploiting its inference API. In this case of model replication, the attacker repeatedly queries the victim's inference API and uses it as an oracle to collect combination of data and label. From the combination of (data,label), the attacker builds a shadown model, that effectively functions as the victim model -- but with lower fidelity. This is generally the first step in model evasion. 
+> An adversary may replicate a machine learning model's functionality by exploiting its inference API. In this case of model replication, the attacker repeatedly queries the victim's inference API and uses it as an oracle to collect combination of data and label. From the combination of (data,label), the attacker builds a shadow model, that effectively functions as the victim model -- but with lower fidelity. This is generally the first step in model evasion. 
 >
 > ##### ![AdvML](/images/color_advml.png)Pre-Trained Weights
 >
-> An adversary uses pre-trained weights of one model to replicate a related model's functionality. For instance, researchers wanted to replicated GPT-2, a large language model. So, the researchers used the pre-trained weights of Grover, another NLP model, and modified it using GPT-2's objective function and training data, which effectively resulted in a shadown GPT-2 model (though with lower fidelity) 
+> An adversary uses pre-trained weights of one model to replicate a related model's functionality. For instance, researchers wanted to replicated GPT-2, a large language model. So, the researchers used the pre-trained weights of Grover, another NLP model, and modified it using GPT-2's objective function and training data, which effectively resulted in a shadow GPT-2 model (though with lower fidelity).
 
 #### ![AdvML](/images/color_advml.png)ML Model Stealing
 
-Machine learning models' functionality can be stolen exploiting an inference API. There is a difference between Model Extraction and Model Replication: in model extraction attacks, the attacker is able to build a shadow model whose fidelity matches that of the victim model and hence, model stealing/extraction attacks lead to Stolen Intellectual Property. In Model Replication attacks, shwon above, the shadow model does not have the same fidelity as that of the victim model. 
+Machine learning models' functionality can be stolen exploiting an inference API. There is a difference between Model Extraction and Model Replication: in model extraction attacks, the attacker is able to build a shadow model whose fidelity matches that of the victim model and hence, model stealing/extraction attacks lead to Stolen Intellectual Property. In Model Replication attacks, shown above, the shadow model does not have the same fidelity as that of the victim model. 
 
 ### Initial Access
 
@@ -106,7 +106,7 @@ The overlap of permissions for local, domain, and cloud accounts across a networ
 <details>
 <summary>Phishing</summary>
 
-Adversaries may send phishing messages to elicit sensitive information and/or gain access to victim systems. All forms of phishing are electronically delivered social engineering. Phishing can be targeted, known as spearphishing. In spearphishing, a specific individual, company, or industry will be targeted by the adversary. More generally, adversaries can conduct non-targeted phishing, such as in mass malware spam campaigns.
+Adversaries may send phishing messages to elicit sensitive information and/or gain access to victim systems. All forms of phishing are electronically delivered social engineering. Phishing can be targeted, known as spear phishing. In spear phishing, a specific individual, company, or industry will be targeted by the adversary. More generally, adversaries can conduct non-targeted phishing, such as in mass malware spam campaigns.
 
 Adversaries may send victim’s emails containing malicious attachments or links, typically to execute malicious code on victim systems or to gather credentials for use of [Valid Accounts](https://attack.mitre.org/techniques/T1078). Phishing may also be conducted via third-party services, like social media platforms.
 </details>
@@ -138,7 +138,7 @@ An Adversary may utilize unsafe ML Models that when executed have an unintended 
 >
 > ##### ![AdvML](/images/color_advml.png)Pickle Embedding
 >
-> Python is one of the most commonly used ML language. Python pickles are used in serializing and de-serializing a Python object structurs. ML models are sometimes stored as pickles and shared. An adversary may use pickle embedding to introduce malicious data payloads which may result in remote code execution.
+> Python is one of the most commonly used ML language. Python pickles are used in serializing and de-serializing a Python object structures. ML models are sometimes stored as pickles and shared. An adversary may use pickle embedding to introduce malicious data payloads which may result in remote code execution.
 
 ### ![Cyber](/images/color_cyber.png) Included ATT&CK Techniques
 <details>
@@ -173,13 +173,13 @@ A tool has been developed to facilitate planting backdoors in cloud container im
 
 #### ![AdvML](/images/color_advml.png)Evasion Attack
 
-Unlike poisoning attacks that needs access to training data, adversaries can fool an ML classifier by simply corrupting the query to the ML model. More broadly, the adversary can create data inputs that prevent a machine learning model from positively identifying the data sample. This technique can be used toevade an ML model to correctly classify it in the downstream task. 
+Unlike poisoning attacks that needs access to training data, adversaries can fool an ML classifier by simply corrupting the query to the ML model. More broadly, the adversary can create data inputs that prevent a machine learning model from positively identifying the data sample. This technique can be used to evade an ML model to correctly classify it in the downstream task. 
 
 
 > ##### ![AdvML](/images/color_advml.png)Offline Evasion
 > In this case, the attacker has an offline copy of the ML model that was obtained via Model Replication or Model Extraction - depending on the case, the offline copy may be a shadow copy or a faithful reconstruction of the original model. While the goal of the adversary is to evade an online model, having access to an Offline model provides a space for the attacker to evade ML model without the fear of tripwires. Once the sample that evades the ML model is found, the attacker can essentially replay the sample to the victim, online model and be successful in the operation. 
 
-> Now this asks the question - how can an an adversary find the sample algorithmically that evades the offline ML model? There are many strategies at play, and depending on the economics, the attacker may choose one from the following: Simple Transformation of the input (cropping, shearing, translation), Common Corruption (adding white noise in the background), Adversarial Examples (carefully perturbing the input to achieve desired output) and Happy String (wherein the benign input is tacked onto malicious query points) 
+> Now this asks the question - how can an an adversary find the sample algorithmically that evades the offline ML model? There are many strategies at play, and depending on the economics, the attacker may choose one from the following: Simple Transformation of the input (cropping, shearing, translation), Common Corruption (adding white noise in the background), Adversarial Examples (carefully perturbing the input to achieve desired output) and Happy String (wherein the benign input is tacked onto malicious query points). 
 >
 > ##### ![AdvML](/images/color_advml.png)Online Evasion
 >
@@ -187,7 +187,7 @@ Unlike poisoning attacks that needs access to training data, adversaries can foo
 
 #### ![AdvML](/images/color_advml.png)Model Poisoning
 
-Adversaries can train machine learning that are performant, but contain backdoors that produce inference errors when presented with input containing a trigger defined by the adversary. A model with a backdoor can be introduced by an innocent user via a [pre-trained model with backdoor](#Pre-Trained-ML-Model-with-Backdoor) or can be a result of [Data Poisoning](#Data-Poisoning). This backdoored model can be exploited at inference time with an [Evasion Attack](#Evasion-Attack)
+Adversaries can train machine learning models that are performant, but contain backdoors that produce inference errors when presented with input containing a trigger defined by the adversary. A model with a backdoor can be introduced by an innocent user via a [pre-trained model with backdoor](#Pre-Trained-ML-Model-with-Backdoor) or can be a result of [Data Poisoning](#Data-Poisoning). This backdoored model can be exploited at inference time with an [Evasion Attack](#Evasion-Attack).
 
 #### ![AdvML](/images/color_advml.png)Data Poisoning
 
@@ -199,15 +199,15 @@ Adversaries may attempt to poison datasets used by a ML system by modifying the 
 >
 > ###### ![AdvML](/images/color_advml.png)Tainting Data from Open Source Supply Chains
 >
-> Adversaries may attempt to add their own data to an open source dataset which could create a classfication backdoor.  For instance, the adversary could cause a targetted misclassification attack only when certain triggers are present in the query; and perform well otherwise. 
+> Adversaries may attempt to add their own data to an open source dataset which could create a classification backdoor.  For instance, the adversary could cause a targeted misclassification attack only when certain triggers are present in the query; and perform well otherwise. 
 >
 > ###### ![AdvML](/images/color_advml.png)Tainting Data from Acquisition - Chaff Data
 >
-> Adding noise to a dataset would lower the accuracy of the model, potentially making the model more vulnerable to misclassifications. For instance, researchers showed how they can overwhelm Splunk (and hence the ML models feedding from it), by simply adding potentially corrupted data. See [Attacking SIEM with Fake Logs](https://letsdefend.io/blog/attacking-siem-with-fake-logs/)
+> Adding noise to a dataset would lower the accuracy of the model, potentially making the model more vulnerable to misclassifications. For instance, researchers showed how they can overwhelm Splunk (and hence the ML models feeding from it), by simply adding potentially corrupted data. See [Attacking SIEM with Fake Logs](https://letsdefend.io/blog/attacking-siem-with-fake-logs/)
 >
 > ###### ![AdvML](/images/color_advml.png)Tainting Data in Training - Label Corruption
 >
-> Changing training labels could create a backdoor in the model, such that a malicious input would always be classified to the benefit of the adversary. For instance, the adversary could cause a targetted misclassification attack only when certain triggers are present in the query; and perform well otherwise. 
+> Changing training labels could create a backdoor in the model, such that a malicious input would always be classified to the benefit of the adversary. For instance, the adversary could cause a targeted misclassification attack only when certain triggers are present in the query; and perform well otherwise. 
 
 ### Exfiltration
 
@@ -217,15 +217,15 @@ Adversaries may exfiltrate private information related to machine learning model
 
 > ##### ![AdvML](/images/color_advml.png)Membership Inference Attack
 >
-> The membership of a data sample in a training set may be infered by an adversary with access to an inference API. By simply querying the inference API of the victim model strategically -- and no extra access -- the adversary can cause privacy violations. 
+> The membership of a data sample in a training set may be inferred by an adversary with access to an inference API. By simply querying the inference API of the victim model strategically -- and no extra access -- the adversary can cause privacy violations. 
 >
 > ##### ![AdvML](/images/color_advml.png)ML Model Inversion
 >
-> Machine learning models' training data could be reconstructed by exploiting the confidence scores that are available via an inference API. By simply querying the inference API strategically, an adversary could back out potentially private information  embedded within the training data. This could lead to privacy violations if the attacker can reconstrcut the data of sensitive features used in the algorithm. 
+> Machine learning models' training data could be reconstructed by exploiting the confidence scores that are available via an inference API. By simply querying the inference API strategically, an adversary could back out potentially private information  embedded within the training data. This could lead to privacy violations if the attacker can reconstruct the data of sensitive features used in the algorithm. 
 
 #### ![AdvML](/images/color_advml.png)ML Model Stealing
 
-Machine learning models' functionality can be stolen exploiting an inference API. There is a difference between Model Extraction and Model Replication: in model extraction attacks, the attacker is able to build a shadow model whose fidelity matches that of the victim model and hence, model stealing/extraction attacks lead to [Stolen Intellectual Property](#Stolen-Intellectual-Property). In Model Replication attacks, shwon above, the shadow model does not have the same fidelity as that of the victim model. 
+Machine learning models' functionality can be stolen exploiting an inference API. There is a difference between Model Extraction and Model Replication: in model extraction attacks, the attacker is able to build a shadow model whose fidelity matches that of the victim model and hence, model stealing/extraction attacks lead to [Stolen Intellectual Property](#Stolen-Intellectual-Property). In Model Replication attacks, shown above, the shadow model does not have the same fidelity as that of the victim model. 
 
 #### ![Cyber](/images/color_cyber.png) Included ATT&CK Techniques
 <details> 
@@ -244,7 +244,7 @@ Adversaries may attack the integrity of machine learning models by crafting adve
 
 Adversaries can create data inputs that prevent a machine learning model from positively identifying the data sample. This technique can be used to evade detection on the network, or to evade a downstream task where machine learning is utilized.
 
-Example evasion attacks include Simple Transformation, Common Corruption, Adversarial Examples, Happy String
+Example evasion attacks include Simple Transformation, Common Corruption, Adversarial Examples, Happy String.
 
 Exploit Open CVEs in Package
 
@@ -279,4 +279,4 @@ Stub
 </details>
 
 # Next Recommended Reading
-See how the matrix can be used via [Case Studies Page](/pages/case-studies-page.md)
+See how the matrix can be used via [Case Studies Page](/pages/case-studies-page.md).
