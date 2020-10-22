@@ -85,9 +85,7 @@ You can email advmlthreatmatrix-core@googlegroups.com with summary of the incide
 ### Join our Mailing List
 
 - For discussions around Adversarial ML Threat Matrix, we invite everyone to join our Google Group [here](https://groups.google.com/forum/#!forum/advmlthreatmatrix/join).
-- Note: Google Groups generally defaults to your personal email. If you would rather access this forum using your corporate email (as opposed to your gmail).
-  - Open your browser in Incognito mode.
-  - Once you sign up with your corporate, and complete captcha, you may get an error. Ignore it! There is also no confirmation email that you joined the group. 
+  - Note: Google Groups generally defaults to your personal email. If you would rather access this forum using your corporate email (as opposed to your gmail), you can create a Google account using your corporate email before joining the group.
   - Also most email clients route emails from Google Groups into "Other"/"Spam"/"Forums" folder. So, you may want to create a rule in your email client to have these emails go  into your inbox instead. 
 
  
