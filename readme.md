@@ -54,7 +54,7 @@ To see the Matrix in action, we recommend seeing the curated case studies
 | NVIDIA              | David Reber Jr., Keith Kozo, Christopher Cottrell, Daniel Rohrer |
 | Airbus              | Adam Wedgbury     |
 |PricewaterhouseCoopers |Michael Montecillo|
-| Deep Instinct       | Nadav Maman       |
+| Deep Instinct       | Nadav Maman, Shimon Noam Oren, Ishai Rosenberg|
 | Two Six Labs        | David Slater      |
 | University of Toronto | Adelin Travers, Jonas Guan, Nicolas Papernot |
 | Cardiff University  | Pete Burnap |
