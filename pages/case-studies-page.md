@@ -5,7 +5,6 @@
   - [ProofPoint Evasion](/pages/case-studies-page.md#proofpoint-evasion)
   - [Tay Poisoning](/pages/case-studies-page.md#tay-poisoning)
   - [Microsoft - Azure Service - Evasion](/pages/case-studies-page.md#microsoft---azure-service)
-  - [Bosch Edge AI - Evasion and Model Extraction](/pages/case-studies-page.md#bosch---edge-ai)
   - [Microsoft Edge AI - Evasion](/pages/case-studies-page.md#microsoft---edge-ai)
   - [MITRE - Physical Adversarial Attack on Face Identification](/pages/case-studies-page.md#mitre---physical-adversarial-attack-on-face-identification)
   
@@ -120,28 +119,6 @@ GPT-2's objective function.
 
 **Reported by:**
 - Microsoft (Azure Trustworthy Machine Learning)
-
-**Source:**
-- None
-
-----
-
-## Bosch - Edge AI
-**Summary of Incident:** : Bosch team performed a research exercise on an internal edge AI system with a dual intention to extract the model and craft adversarial examples to evade.
-
-**Mapping to Adversarial Threat Matrix:**
--   The team first performed reconnaissance to gather information about the edge AI system device working with sensor interface.
--   Then, using a trusted relationship mechanism between sensor and edge ai system team fed synthetic data on sensor to extract the model.
--   Using this, the team performed an offline evasion attack by crafting adversarial example with help of extracted model
--   Via an exposed sensor interface, the team performed an online evasion attack by replaying the adversarial examples, which helped achieve this goal.
--   This operation had a combination of traditional ATT&CK industrial control system techniques such as supply chain compromise via sensor, and Executing code via sensor interface. all interleaved with adversarial ML specific steps such as,
-  - offline and online evasion examples.
-- The team was also able to reconstruct the edge ai system with extracted model.
-
-![alt_text](/images/Bosch1.PNG)
-
-**Reported by:** 
-- Manoj Parmar (@mparmar47)
 
 **Source:**
 - None
