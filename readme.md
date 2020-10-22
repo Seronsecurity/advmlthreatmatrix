@@ -33,7 +33,6 @@ To see the Matrix in action, we recommend seeing the curated case studies
   - [ProofPoint Evasion](/pages/case-studies-page.md#proofpoint-evasion)
   - [Tay Poisoning](/pages/case-studies-page.md#tay-poisoning)
   - [Microsoft - Azure Service - Evasion](/pages/case-studies-page.md#microsoft---azure-service)
-  - [Bosch Edge AI - Evasion and Model Extraction](/pages/case-studies-page.md#bosch---edge-ai)
   - [Microsoft Edge AI - Evasion](/pages/case-studies-page.md#microsoft---edge-ai)
   - [MITRE - Physical Adversarial Attack on Face Identification](/pages/case-studies-page.md#mitre---physical-adversarial-attack-on-face-identification)
 
