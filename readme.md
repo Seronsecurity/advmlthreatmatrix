@@ -47,7 +47,7 @@ To see the Matrix in action, we recommend seeing the curated case studies
 
 | **Organization**    | **Contributors**    |
 | :---                | :---                |
-| Microsoft           | Ram Shankar Siva Kumar, Hyrum Anderson, Suzy Schapperle, Blake Strom, Madeline Carmichael, Matt Swann, Mark Russinovich, Nick Beede, Kathy Vu, Andi Comissioneru, Sharon Xia, Mario Goertzel, Jeffrey Snover, Derek Adam, Deepak Manohar, Bhairav Mehta, Peter Waxman, Abhishek Gupta, Ann Johnson, Andrew Paverd  |
+| Microsoft           | Ram Shankar Siva Kumar, Hyrum Anderson, Suzy Schapperle, Blake Strom, Madeline Carmichael, Matt Swann, Mark Russinovich, Nick Beede, Kathy Vu, Andi Comissioneru, Sharon Xia, Mario Goertzel, Jeffrey Snover, Derek Adam, Deepak Manohar, Bhairav Mehta, Peter Waxman, Abhishek Gupta, Ann Johnson, Andrew Paverd, Pete Bryan, Roberto Rodriguez  |
 | MITRE               | Mikel Rodriguez, Christina Liaghati, Keith Manville, Michael Krumdick, Josh Harguess |
 | Bosch               | Manojkumar Parmar |
 | IBM                 | Pin-Yu Chen       |
