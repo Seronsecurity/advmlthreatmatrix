@@ -273,4 +273,4 @@ Adversaries may attempt to shutdown/reboot a system after impacting it in other 
 </details>
 
 # Next Recommended Reading
-See how the matrix can be used via [Case Studies Page](/pages/case-studies-page.md).
+See how the matrix can be used via [Case Studies Page](/pages/case-studies-page.md#case-studies-page).
